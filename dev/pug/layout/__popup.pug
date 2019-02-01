@@ -1,0 +1,29 @@
+.hidden-block
+  .popup__over
+    span.popup__bg.js-popbg
+    +b.popup#feed
+      +e.close.js-popclose(type="button", title="Закрыть")
+      +e('p').title(data-text="Подписка на новости") Обратная связь
+      +e('p').subtitle Обратите внимание на то, что все поля обязательны для заполнения.
+      +e('form').form
+        .common__row
+          label.common__label Имя
+            span *
+          input.common__input(type="text", data-req="req")
+          span.common__inperror Поле незаполнено или заполнено неверно
+        .common__row
+          label.common__label E-mail
+            span *
+          input.common__input(type="text", data-req="req")
+          span.common__inperror Поле незаполнено или заполнено неверно
+        .common__row
+          .fakecheckbox
+            input(type="checkbox", value="", name="agreement", checked)#agreement.fakecheckbox__truecheck
+            label(for="agreement").fakecheckbox__label Согласен на 
+              a(href="#") обработку персональных данных
+        .common__row
+          button.common__submit.btn(type="submit") Отправить
+    +b.popup#text
+      +e.close.js-popclose(type="button", title="Закрыть")
+      +e('p').title(data-text="Текстовый попап") Текстовый попап
+      +e('p').subtitle Обратите внимание на то, что это текстовый попап для того, чтобы показать, что он вообще есть и им можно пользоваться, не боясь!

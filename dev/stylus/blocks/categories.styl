@@ -1,0 +1,55 @@
+.cats
+  pos relative
+  z-index 1
+  bgc $blue
+  &__list
+    font-size 0
+    h 100vh
+  &__item
+    ib()
+    h 50%
+    w calc(100% / 3)
+    text-align center
+    border-right 1px solid #4d86bb
+    border-bottom 1px solid #4d86bb
+    transition .7s background-color
+    &:hover
+      bgc alpha($blue, .7)
+    &:first-child
+      h 100%
+      float left
+    &-inner
+      h 100%
+      padding 30px
+      dfv(center, center)
+    &-img
+      max-width 100%
+      opacity .5
+      transition .7s opacity
+      ^[-1]:hover &
+        opacity 1
+    &-dsc
+      mt 45px
+      c white
+      fontify 24px 700 30px
+      border-bottom 1px solid transparent
+      transition .7s border
+      ^[-1]:hover &
+        border-color white
+  &__bg
+    pos absolute
+    z-index -1
+    opacity .3
+    l 0
+    t 0
+    r 0
+    b 0
+    background-size cover
+    background-position center
+    background-repeat no-repeat
+    transition .5s background
+
+
+@supports not (-webkit-overflow-scrolling: touch)
+  .cats__bg
+    background-attachment fixed

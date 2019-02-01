@@ -1,0 +1,30 @@
+.developers
+  mt 149px
+  &__car
+    &-wrapper
+      pos relative
+      mt 75px
+      .swiper-buttons
+        pos absolute
+        r 0
+        t -96px
+    .swiper-slide
+      dfv(center, center)
+      h 100px
+      &:before
+        content ""
+        pos absolute
+        size 1px 50px
+        bgc #e0e0e0
+        t 50%
+        l -1px
+        mt -25px
+  &__img
+    max-width 100%
+    max-height 95%
+    opacity .3
+    filter grayscale(100%)
+    transition .7s filter, .7s opacity
+    &:hover
+      opacity 1
+      filter grayscale(0%)

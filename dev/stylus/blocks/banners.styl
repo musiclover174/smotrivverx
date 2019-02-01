@@ -1,0 +1,48 @@
+.banner
+  &__car
+    .swiper-slide
+      df(center, flext-start)
+      oh()
+      padding 150px 0 40px
+      min-height 100vh
+      @media $LandscapeMedium
+        min-height 360px
+      @media $LandscapeMin
+        min-height 320px
+        padding 60px 0
+      &-active ^[0]__img
+        transform scale(1.02) translateX(-50%)
+      .container
+        h 100%
+        df(center, flex-end)
+    .swiper-buttons
+      @media $desktopTablet
+        dn()
+  &__block
+    w 100%
+    max-width 555px
+    bgc white
+    padding 40px 67px
+  &__img
+    pos absolute
+    t 0
+    l 50%
+    min-width 100%
+    min-height 100%
+    z-index -1
+    transform scale(1) translateX(-50%)
+    will-change transform
+    transition 8s transform linear
+  &__title
+    c $dark
+    fontify 48px 700 58px
+    @media $desktopMedium
+      fontify 50px 700 50px
+    @media $LandscapeMedium
+      fontify 40px 700 40px
+  &__text
+    c $dark
+    fontify 18px 400 28px
+    mt 10px
+  &__more
+    mt 25px

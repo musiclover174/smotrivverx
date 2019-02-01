@@ -1,0 +1,53 @@
+include ../bemto/bemto.pug
+
++b('header').header
+  +e('aside').logoover
+    +e.img(src="img/logo.png")
+  +b('nav').menu
+    +e('ul').list
+      +e.item
+        +e.href._active(href="#") О компании
+      +e.item
+        +e.href._sub(href="#") Каталог
+        +e('ul').sublist
+          +e.sublist-item
+            +e.sublist-href._sub(href="#") Потолок
+            +e('ul').sublist._lvl2
+              +e.sublist-item
+                +e.sublist-href(href="#") Armstrong
+              +e.sublist-item
+                +e.sublist-href(href="#") Металлический
+              +e.sublist-item
+                +e.sublist-href(href="#") Грильято
+              +e.sublist-item
+                +e.sublist-href(href="#") Реечный
+              +e.sublist-item
+                +e.sublist-href(href="#") Дизайнерский
+          +e.sublist-item
+            +e.sublist-href(href="#") Подвесная система
+          +e.sublist-item
+            +e.sublist-href(href="#") Светильники
+      +e.item
+        +e.href._sub(href="#") Калькулятор
+        +e('ul').sublist
+          +e.sublist-item
+            +e.sublist-href(href="#") Подпункт 1
+          +e.sublist-item
+            +e.sublist-href(href="#") Подпункт 2
+      +e.item
+        +e.href._sub(href="#") Применение
+        +e('ul').sublist
+          +e.sublist-item
+            +e.sublist-href(href="#") Подпункт 1
+          +e.sublist-item
+            +e.sublist-href(href="#") Подпункт 2
+      +e.item
+        +e.href(href="#") Проекты
+      +e.item
+        +e.href(href="#") Контакты
+      +e.item._tablet
+  +e('aside').contact
+    +e.contact-row
+      +e.phone(href="tel:73512606843") +7 (351) 260-68-43
+    +e.contact-row
+      +e.feed(href="#", data-popup ,data-src="#feed") Обратная связь

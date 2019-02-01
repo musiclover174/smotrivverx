@@ -1,0 +1,45 @@
+.decor
+  pos absolute
+  z-index -1
+  df()
+  background url('../i/decor.png') repeat top left
+  @media $LandscapeMedium
+    dn()
+  &_type1
+    background url('../i/decor1.png') no-repeat center
+    size 231px 233px
+
+.sharp
+  background-repeat repeat
+  background-position top left
+  &_grey
+    background-image url('../i/sharp_g.png')
+  &_blue
+    background-image url('../i/sharp_b.png')
+
+.popular
+  .decor
+    filter brightness(0%) invert(1)
+    t -260px
+    l 45%
+    transform rotate(135deg)
+
+.about
+  .decor
+    filter brightness(0%) invert(1)
+    opacity .1
+    b 30px
+    l 82px
+    transform rotate(195deg)
+
+.features
+  .decor
+    b -170px
+    l 35%
+
+
+.projects
+  .decor
+    b -47px
+    r 4%
+    transform rotate(-95deg)

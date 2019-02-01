@@ -1,0 +1,77 @@
+.projects
+  mt 177px
+  &__top
+    pos absolute
+    l -5px
+    t 746px
+    width 747px
+    df(center, flex-start)
+    transform rotate(90deg) scaleX(-1) scaleY(-1)
+    transform-origin 0 0
+  &__car
+    h 100%
+    &-wrapper
+      h 805px
+      pl 140px
+      pr 60px
+      .swiper-slide
+        &-active ^[0]__item-img
+          opacity 1
+        &-active ^[0]__item-content
+          opacity 1
+          visibility visible
+      .swiper-buttons
+        size 0
+        pos absolute
+        r -4px
+        t 50%
+        transform translateY(-50%) rotate(90deg)
+      .swiper-pagination
+        pos relative
+        margin -2px 30px 0
+      .swiper-button-prev
+        mr 0
+  &__rotator
+    df()
+    h 16px
+    white-space nowrap
+    pos relative
+    l 50%
+    transform translateX(-50%)
+  &__item
+    df(center, flex-start)
+    h 100%
+    &-side
+      w calc(50% + 78px)
+      mr 60px
+      pos relative
+      min-height 100%
+      oh()
+    &-img
+      pos absolute
+      l 0
+      t 0
+      r 0
+      b 0
+      opacity .2
+      background-size cover
+      background-repeat no-repeat
+      background-position top center
+      transition .7s opacity
+    &-content
+      padding 30px 0
+      w calc(50% - 138px)
+      visibility hidden
+      opacity 0
+      transition .7s opacity, .7s visibility
+    &-date
+      c alpha($dark, .5)
+      fontify 16px 400 26px
+      mb 11px
+    &-title
+      c $dark
+      fontify 26px 700 38px
+      border-bottom 1px solid $blue
+      transition .7s border
+      &:hover
+        border-color transparent

@@ -1,0 +1,271 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body.index
+
+    .section_ft.js-footer-top
+      include layout/__footer-top
+
+    +b('main').main._index
+
+      include layout/__header
+
+      +b('section').banner
+        +e.car.swiper-container.js-banner
+          .swiper-wrapper
+            .swiper-slide
+              +e.img(src="img/banner.jpg")
+              .container
+                +e.block
+                  +e('p').title Подвесные потолки типа Armstrong
+                  +e('p').text Одним из самых распространённых видов подвесного потолка является потолок типа «Armstrong». Лёгкость и универсальность его конструкции, классический дизайн, прекрасно вписывающийся в любой интерьер.
+                  +e.more.btn(href="#") Узнать подробнее
+            .swiper-slide
+              +e.img(src="img/banner.jpg")
+              .container
+                +e.block
+                  +e('p').title Короткий заголовок
+                  +e('p').text Одним из самых распространённых видов подвесного потолка является потолок типа «Armstrong». Лёгкость и универсальность его конструкции, классический дизайн, прекрасно вписывающийся в любой интерьер.
+                  +e.more.btn(href="#") Узнать подробнее
+            .swiper-slide
+              +e.img(src="img/banner.jpg")
+              .container
+                +e.block
+                  +e('p').title Текст подлиннее, возможно даже в 3&nbsp;строки
+                  +e('p').text Одним из самых распространённых видов подвесного потолка является потолок типа «Armstrong». Лёгкость и универсальность его конструкции, классический дизайн, прекрасно вписывающийся в любой интерьер.
+                  +e.more.btn(href="#") Узнать подробнее
+          .swiper-pagination
+
+      +b('section').cats.js-cat.h-anim
+        +e('span').bg.js-cat-bg(style="background-image: url('img/cat-bg.jpg')")
+        +e.list
+          +e.item.js-cat-elem(data-bg="img/cat-bg.jpg", href="#")
+            +e('figure').item-inner
+              +e.item-img(src="img/cat1.png")
+              +e('figcaption').item-dsc Образование
+          +e.item.js-cat-elem(data-bg="img/banner.jpg", href="#")
+            +e('figure').item-inner
+              +e.item-img(src="img/cat2.png")
+              +e('figcaption').item-dsc Медицина
+          +e.item.js-cat-elem(data-bg="img/cat-bg.jpg", href="#")
+            +e('figure').item-inner
+              +e.item-img(src="img/cat3.png")
+              +e('figcaption').item-dsc Торговля
+          +e.item.js-cat-elem(data-bg="img/banner.jpg", href="#")
+            +e('figure').item-inner
+              +e.item-img(src="img/cat4.png")
+              +e('figcaption').item-dsc Офис
+          +e.item.js-cat-elem(data-bg="img/cat-bg.jpg", href="#")
+            +e('figure').item-inner
+              +e.item-img(src="img/cat5.png")
+              +e('figcaption').item-dsc Специальные помещения
+
+      +b('section').popular.sharp_grey.h-anim
+        .container.container_rel
+          figure.decor.decor_type1
+          +e.top
+            p.common__title Популярные решения
+            span.common__spacer
+            a(href="#").common__href Перейти в каталог
+          +e.car-wrapper
+            +e.car.swiper-container.js-popular-car
+              .swiper-wrapper
+                .swiper-slide
+                  +e.item
+                    +e.item-imgover
+                      +e.item-img(src="img/popular1.jpg")
+                    +e('p').item-cost 292 р.
+                    +e.item-hrefover
+                      +e.item-href(href="#") Подвесной потолок Armstrong Oasis Board, 600*600*12 мм
+                    +e.item-bottom
+                      +e.item-btn.btn._empty(type="button") Заказать
+                .swiper-slide
+                  +e.item
+                    +e.item-imgover
+                      +e.item-img(src="img/popular2.jpg")
+                    +e('p').item-cost 343 р.
+                    +e.item-hrefover
+                      +e.item-href(href="#") Плита Armstrong Scala BP2621M3A, 600*600*12 мм
+                    +e.item-bottom
+                      +e.item-btn.btn._empty(type="button") Заказать
+                .swiper-slide
+                  +e.item
+                    +e.item-imgover
+                      +e.item-img(src="img/popular1.jpg")
+                    +e('p').item-cost 456 р.
+                    +e.item-hrefover
+                      +e.item-href(href="#") Плита Armstrong Байкал BP98432М3, 600*600*12 мм
+                    +e.item-bottom
+                      +e.item-btn.btn._empty(type="button") Заказать
+                .swiper-slide
+                  +e.item
+                    +e.item-imgover
+                      +e.item-img(src="img/popular2.jpg")
+                    +e('p').item-cost 343 р.
+                    +e.item-hrefover
+                      +e.item-href(href="#") Плита Armstrong Scala BP2621M3A, 600*600*12 мм
+                    +e.item-bottom
+                      +e.item-btn.btn._empty(type="button") Заказать
+            .swiper-buttons
+              .swiper-button-prev
+              .swiper-button-next
+            
+      +b('section').about.sharp_blue.h-anim 
+        .container.container_rel
+          figure.decor.decor_type1
+          +e('aside').top
+            p.common__title.common__title_white О компании
+            span.common__spacer
+            a(href="#").common__href.common__href_white Читать подробнее
+          +e.block(style="background-image: url('img/about-big.jpg')")
+            +e.text
+              p Подвесной потолок типа Armstrong представляет собой конструкцию из подвесной системы (профили и элементы крепления) с подвешенными на нее минеральными плитами. 
+              p Плиты уже имеют декоративное покрытие, поэтому после монтажа потолка не требуются дополнительные отделочные работы (покраска и т.п.).
+            +e.img(src="img/about-small.jpg")
+          +e.info
+            +e.col._col2
+              +e('p').info-digit 8
+              +e('p').info-text Лет на рынке
+            +e.col._col2
+              +e('p').info-digit 4568
+              +e('p').info-text Постоянных<br>клиентов
+            +e.col._col2
+              +e('p').info-digit 17
+              +e('p').info-text Цифровое<br>значение
+            +e.col._col2
+              +e('p').info-digit 560
+              +e('p').info-text Цифровое<br>значение
+
+      +b('section').features.h-anim
+        .container.container_rel
+          figure.decor.decor_type1
+          +e('aside').top
+            p.common__title Преимущества
+            span.common__spacer
+          +e.block
+            +e('ul').list
+              +e.item
+                +e.item-iconover
+                  +e.icon(src="img/feat1.png")
+                +e('p').item-title Более 8 лет на <br>рынке
+              +e.item
+                +e.item-iconover
+                  +e.icon(src="img/feat2.png")
+                +e('p').item-title Высоко-<br>квалифицированный <br>персонал
+              +e.item
+                +e.item-iconover
+                  +e.icon(src="img/feat3.png")
+                +e('p').item-title Доставка <br>в день заказа
+              +e.item
+                +e.item-iconover
+                  +e.icon(src="img/feat4.png")
+                +e('p').item-title Индивидуальный<br>подход
+              +e.item
+                +e.item-iconover
+                  +e.icon(src="img/feat5.png")
+                +e('p').item-title Наличие на складе
+              +e.item
+                +e.item-iconover
+                  +e.icon(src="img/feat6.png")
+                +e('p').item-title Низкая цена
+            +e('aside').gallery-wrapper
+              +e('span').gallery-bg.sharp_grey
+              +e.gallery-car.swiper-container.js-gallery-car
+                .swiper-wrapper
+                  .swiper-slide(style="background-image: url('img/gallery1.jpg')")
+                  .swiper-slide(style="background-image: url('img/gallery2.jpg')")
+            
+      +b('section').developers.h-anim
+        .container.container_rel
+          p.common__title Производители
+          +e.car-wrapper
+            +e.car.swiper-container.js-developers-car
+              .swiper-wrapper
+                .swiper-slide
+                  +e.img(src="img/dev1.png")
+                .swiper-slide
+                  +e.img(src="img/dev2.png")
+                .swiper-slide
+                  +e.img(src="img/dev3.png")
+                .swiper-slide
+                  +e.img(src="img/dev4.png")
+                .swiper-slide
+                  +e.img(src="img/dev2.png")
+            .swiper-buttons
+              .swiper-button-prev
+              .swiper-button-next
+
+      +b('section').projects.h-anim
+        .container.container_rel
+          figure.decor.decor_type1
+          +e.top
+            p.common__title Проекты
+            span.common__spacer
+            a(href="#").common__href Все проекты
+          +e.car-wrapper
+            +e.car.swiper-container.js-projects-car
+              .swiper-wrapper
+                .swiper-slide
+                  +e('article').item
+                    +e('aside').item-side
+                      +e.item-img(href="#", style="background-image: url('img/proj1.jpg')")
+                    +e.item-content
+                      +e('p').item-date 21 января 2018
+                      +e.item-title(href="#") Короткий текст
+                .swiper-slide
+                  +e('article').item
+                    +e('aside').item-side
+                      +e.item-img(href="#", style="background-image: url('img/proj2.jpg')")
+                    +e.item-content
+                      +e('p').item-date 21 января 2018
+                      +e.item-title(href="#") Название проекта в несколько строчек, чтобы показать межстрочное расстояние
+                .swiper-slide
+                  +e('article').item
+                    +e('aside').item-side
+                      +e.item-img(href="#", style="background-image: url('img/proj3.jpg')")
+                    +e.item-content
+                      +e('p').item-date 21 января 2018
+                      +e.item-title(href="#") Очень длинный текст, чтобы посмотреть, как он может выглядеть. Ведь иногда мне кажется, что лучше сразу их чекнуть, чем потом (:
+            .swiper-buttons
+              +e.rotator
+                .swiper-button-prev
+                .swiper-pagination
+                .swiper-button-next
+
+      +b('section').feedback
+        .container.container_rel.sharp_grey
+          +e.inner
+            +e.top
+              p.common__title Обратная связь
+              p.common__subtitle Заполните поля ниже и наши менеджеры свяжутся с Вами в самое ближайшее время.
+            +e('form').form
+              +e.form-top
+                .common__col
+                  .common__row
+                    input.common__input(type="text", data-req="req")
+                    label.common__placeholder Ваше имя
+                      span *
+                  .common__row
+                    input.common__input.js-phone(type="text", data-req="req")
+                    label.common__placeholder Телефон
+                      span *
+                  .common__row
+                    input.common__input(type="text")
+                    label.common__placeholder Электронная почта
+                .common__col
+                  .common__row
+                    textarea.common__textarea
+                    label.common__placeholder Текст сообщения
+              +e.form-bottom
+                .fakecheckbox
+                  input(type="checkbox", value="", name="agreement", checked)#agreement.fakecheckbox__truecheck
+                  label(for="agreement").fakecheckbox__label 
+                    a(href="#") Согласен на обработку персональных данных
+                button.common__submit.btn.btn_empty(type="submit") Отправить
+
+    include layout/__scripts
+    include layout/__footer
+    include layout/__popup
