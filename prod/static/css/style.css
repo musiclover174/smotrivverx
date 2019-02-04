@@ -3306,6 +3306,15 @@ body.burgeropen .menu {
   font-weight: inherit;
   line-height: 28px;
   border-bottom: 1px solid rgba(255,255,255,0.5);
+  -webkit-transition: 0.7s border-color;
+  transition: 0.7s border-color;
+}
+.footer__item-href:hover,
+.footer__item-href_active {
+  border-color: transparent;
+}
+.footer__item-href_active {
+  opacity: 0.75;
 }
 .footer__phones {
   display: -webkit-box;
@@ -3426,11 +3435,6 @@ body.burgeropen .menu {
 .footer:not(.footer_dark) .footer__mail:before {
   -webkit-filter: brightness(0%) invert(1);
   filter: brightness(0%) invert(1);
-}
-.section_ft.open .footer {
-  padding-top: 35px;
-  padding-bottom: 46px;
-  max-height: 400px;
 }
 .hidden-block {
   height: 0;
@@ -3597,7 +3601,7 @@ body.burgeropen .menu {
   justify-content: flext-start;
   overflow: hidden;
   padding: 150px 0 40px;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 @media (max-width: 950px) {
   .banner__car .swiper-slide {
@@ -3795,6 +3799,7 @@ body.burgeropen .menu {
 }
 .popular__car-wrapper .swiper-buttons {
   position: absolute;
+  z-index: 1;
   right: 0;
   top: -68px;
 }
@@ -4100,6 +4105,7 @@ body.burgeropen .menu {
 }
 .developers__car-wrapper .swiper-buttons {
   position: absolute;
+  z-index: 1;
   right: 0;
   top: -96px;
 }

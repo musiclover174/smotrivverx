@@ -7,7 +7,7 @@ include ../bemto/bemto.pug
         +e('nav').nav
           +e('ul').list
             +e.item._parent
-              +e.item-href(href="#") О компании
+              +e.item-href._active(href="#") О компании
             +e.item._parent
               +e.item-href(href="#") Каталог
             +e.item
@@ -24,7 +24,7 @@ include ../bemto/bemto.pug
             +e.item
               +e.item-href(href="#") Образование
             +e.item
-              +e.item-href(href="#") Медицина
+              +e.item-href._active(href="#") Медицина
             +e.item
               +e.item-href(href="#") Торговля
             +e.item

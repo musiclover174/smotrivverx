@@ -73,6 +73,12 @@
       c inherit
       fontify 18px inherit 28px
       border-bottom 1px solid alpha(white, .5)
+      transition .7s border-color
+      &:hover,
+      &_active
+        border-color transparent
+      &_active
+        opacity .75
   &__phones
     dfv()
     pos relative
@@ -152,9 +158,3 @@
   .footer__address:before,
   .footer__mail:before
     filter brightness(0%) invert(1)
-
-.section_ft
-  &.open .footer
-    pt 35px
-    pb 46px
-    max-height 400px

@@ -35,17 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.popup = new Popup('[data-popup]');
   }
 
-  if (qs('.js-footer-top')) {
-    const ftElem = qs('.js-footer-top');
-    window.addEventListener('wheel', (e) => {
-      if (e.deltaY < 0 && window.scrollY === 0) {
-        ftElem.classList.add('open');
-      } else if (ftElem.classList.contains('open')) {
-        ftElem.classList.remove('open');
-      }
-    });
-  }
-
   resizeWatcher();
 
   let eventScroll;

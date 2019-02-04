@@ -5,14 +5,9 @@ html
   head(lang="ru")
     include layout/__head
   body.index
-
-    .section_ft.js-footer-top
-      include layout/__footer-top
+    include layout/__header
 
     +b('main').main._index
-
-      include layout/__header
-
       +b('section').banner
         +e.car.swiper-container.js-banner
           .swiper-wrapper
