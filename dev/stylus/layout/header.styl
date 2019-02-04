@@ -1,44 +1,59 @@
 .header
   bgc white
+  df(center, space-between)
+  z-index 2
+  h 100px
   @media $lDesktopMaxFrom
     padding 0 90px
     max-width 1600px
-  @media (min-width:1271px) and (max-width:1679px)
+  @media (min-width:1361px) and (max-width:1679px)
     padding 0 40px
     max-width 1266px
-  @media $LandscapeMinFrom
-    df(center, space-between)
+  @media (min-width:1171px) and (max-width:1360px)
+    max-width calc(100% - 60px)
+    padding 0 30px
+  @media $desktopMinFrom
     pos absolute
-    z-index 2
     w 100%
-    h 100px
     l 50%
     t 40px
     transform translateX(-50%)
-  @media $LandscapeMin
+  @media $desktopMin
+    h 80px
     pos fixed
     t 0
     l 0
     w 100%
-    padding 15px 0
+    padding 0 30px
+    max-width 100%
     z-index 5
     box-shadow 0 3px 34.3px 0.7px rgba(112,118,126,0.15)
+  @media $Mobile370
+    padding 0 20px
+  &__logoover
+    @media (max-width:1360px) and (min-width:1171px)
+      max-width 255px
+    @media $Mobile370
+      max-width 190px
   &__img
     max-width 100%
   &__contact
     pos relative
-    pr 52px
     text-align right
-    mt -3px
-    &:after
-      content ""
-      pos absolute
-      r 0
-      t 2px
-      size 38px
-      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAQAAABHeoekAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAR8LJR8AsJ8GAAAAv0lEQVQY03WQsU4CURBFz25Wo1RIY2FiQWInNdRiwRfQG2t/g5LSb7BlY6f0Vv4AgcaEAuhMKLZ4x8JVNuzbO80kc27mziQCwCkFUaVAwpQ9D3EA8UnVlZnUC8/d+atxHBj4p1kMSPmizEnelGGuah7zC2LfoG68bALwWdW5J03AmR+qvnlRDkb2qgC2/VR16VB8NBh88eYAYMf38tyFoewKu9V9mRMLq9rYOg516+u//9s7Say/5pp7rtiSs4YfoAvztwkWLXkAAAAASUVORK5CYII=') no-repeat center $blue
-      box-shadow 0 4px 9px rgba(0, 81, 158, 0.31)
-      border-radius 50%
+    @media $desktopMediumFrom
+      mt -3px
+      pr 52px
+      &:after
+        content ""
+        pos absolute
+        r 0
+        t 2px
+        size 38px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAQAAABHeoekAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAR8LJR8AsJ8GAAAAv0lEQVQY03WQsU4CURBFz25Wo1RIY2FiQWInNdRiwRfQG2t/g5LSb7BlY6f0Vv4AgcaEAuhMKLZ4x8JVNuzbO80kc27mziQCwCkFUaVAwpQ9D3EA8UnVlZnUC8/d+atxHBj4p1kMSPmizEnelGGuah7zC2LfoG68bALwWdW5J03AmR+qvnlRDkb2qgC2/VR16VB8NBh88eYAYMf38tyFoewKu9V9mRMLq9rYOg516+u//9s7Say/5pp7rtiSs4YfoAvztwkWLXkAAAAASUVORK5CYII=') no-repeat center $blue
+        box-shadow 0 4px 9px rgba(0, 81, 158, 0.31)
+        border-radius 50%
+    @media $desktopMin
+      dn()
     &-row
       & + &
         mt 6px
@@ -48,6 +63,8 @@
     white-space nowrap
     @media $lDesktopMax
       fontify 16px 700 16px
+    @media $desktopMin
+      fontify 24px 700 32px
   &__feed
     ib()
     mr 3px
@@ -55,5 +72,7 @@
     fontify 16px 700 16px
     border-bottom 1px dashed $blue
     transition .7s border
+    @media $desktopMin
+      fontify 24px 700 24px
     &:hover
       border-color transparent

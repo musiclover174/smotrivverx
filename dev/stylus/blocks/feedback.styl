@@ -2,21 +2,39 @@
   mt 159px
   @media $lDesktopMax
     mt 140px
+  @media $LandscapeMax
+    margin 95px -30px 0
   &__inner
     padding 72px 137px 80px
     @media $lDesktopMax
       padding 66px 105px 80px
+    @media $LandscapeMax
+      padding 60px 30px
   &__form
     mt 47px
     &-top
       df(flex-start, space-between)
+      @media $LandscapeMin
+        flex-direction column
     &-bottom
       df(center, space-between)
       mt 22px
+      @media $LandscapeMin
+        flex-direction column
+        align-items flex-start
+        justify-content flex-start
+        .common__submit
+          mt 26px
   &__top
     df()
+    @media $LandscapeMedium
+      flex-direction column
     .common__subtitle
       ml 74px
       max-width 410px
       @media $lDesktopMax
         ml 66px
+      @media $LandscapeMedium
+        ml 0
+        mt 15px
+        max-width 100%

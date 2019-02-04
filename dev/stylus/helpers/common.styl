@@ -11,12 +11,19 @@ body
   margin 0 auto
   @media $lDesktopMax
     max-width 1266px
+  @media $desktopMax
+    max-width calc(100% - 60px)
+  @media $Mobile370
+    max-width calc(100% - 40px)
   &_rel
     pos relative
     z-index 1
 .main
   oh()
   pos relative
+  &_index
+    @media $LandscapeMax
+      mb -95px
   h1:not([class])
     color $blue
     fontify 60px 900 66px
@@ -164,6 +171,8 @@ div[class\^="table-scroller"]
     fontify 48px 700 48px
     @media $lDesktopMax
       fontify 38px 700 38px
+    @media $Mobile370
+      fontify 28px 700 38px
     &_white
       c white
   &__subtitle
@@ -177,6 +186,8 @@ div[class\^="table-scroller"]
     bgc #e0e0e0
     flex-grow 1
     mt 13px
+    @media $PortraitMax
+      dn()
   &__label
     c #a6a6a6
     fontify 16px 400 28px
@@ -193,6 +204,9 @@ div[class\^="table-scroller"]
     @media $lDesktopMax
       fontify 16px 700 16px
       mt 11px
+    @media $PortraitMax
+      ib()
+      mt 20px
     &:after
       content ""
       pos absolute
@@ -301,6 +315,10 @@ div[class\^="table-scroller"]
     w calc(50% - 22px)
     @media $lDesktopMax
       w calc(50% - 15px)
+    @media $LandscapeMin
+      w 100%
+      & + &
+        mt 19px
   &__submit
     pos relative
     mt 16px
@@ -316,6 +334,8 @@ div[class\^="table-scroller"]
   ib()
   pos relative
   mt 11px
+  @media $LandscapeMin
+    mt 0
   &__label
     max-width 100%
     ib()

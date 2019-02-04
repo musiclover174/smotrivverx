@@ -7,6 +7,11 @@
     h 100vh
     @media $lDesktopMax
       h 540px
+    @media $PortraitMedium
+      h auto
+    @media $PortraitMedium
+      df()
+      flex-wrap wrap
   &__item
     ib()
     h 50%
@@ -15,11 +20,19 @@
     border-right 1px solid #4d86bb
     border-bottom 1px solid #4d86bb
     transition .7s background-color
+    @media $PortraitMedium
+      h auto
+      w 100%
     &:hover
       bgc alpha($blue, .7)
     &:first-child
       h 100%
       float left
+      @media $PortraitMedium
+        min-height 50%
+        h auto
+        w 100%
+        float none
     &-inner
       h 100%
       padding 30px
@@ -39,6 +52,8 @@
       @media $lDesktopMax
         fontify 20px 700 24px
         mt 30px
+      @media $LandscapeMax
+        fontify 18px 700 22px
       ^[-1]:hover &
         border-color white
   &__bg

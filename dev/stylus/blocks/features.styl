@@ -2,6 +2,8 @@
   padding 160px 0
   @media $lDesktopMax
     padding 138px 0
+  @media $LandscapeMax
+    padding 95px 0 0
   &__top
     pos absolute
     l -5px
@@ -14,12 +16,23 @@
       l -2px
       t 500px
       w 529px
+    @media $LandscapeMax
+      t 0
+      w 100%
+      l 0
+      transform none
+      pos relative
+      mb 60px
   &__block
     pl 230px
     df(center, flex-start)
     @media $lDesktopMax
       pl 190px
       align-items flex-start
+    @media $desktopMin
+      pl 120px
+    @media $LandscapeMax
+      pl 0
   &__list
     df(flex-start, space-between)
     flex-wrap wrap
@@ -27,11 +40,24 @@
     pt 35px
     @media $lDesktopMax
       pt 22px
+    @media $LandscapeMax
+      pt 0
+      w calc(50% - 20px)
+    @media $LandscapeMedium
+      w 100%
   &__item
     w calc(50% - 22px)
     mb 50px
     @media $lDesktopMax
       mb 42px
+    @media $LandscapeMedium
+      w calc(100% / 3 - 22px)
+    @media $PortraitMax
+      w calc(50% - 22px)
+    @media $Mobile370
+      w 100%
+      br
+        dn()
     &-iconover
       df(flex-end, flex-start)
       h 75px
@@ -55,6 +81,8 @@
       @media $lDesktopMax
         t -138px
         b -138px
+      @media $LandscapeMax
+        dn()
     &-wrapper
       pos relative
       w calc(50% + 77px)
@@ -62,9 +90,16 @@
       @media $lDesktopMax
         ml 55px
         w calc(50% + 42px)
+      @media $LandscapeMax
+        w calc(50% - 20px)
+        ml 20px
+      @media $LandscapeMedium
+        dn()
     &-car
       w calc(100% - 60px)
       ml 0
+      @media $desktopMin
+        w 100%
       .swiper-slide
         pt 100%
         border-radius 50%

@@ -1,7 +1,7 @@
 .menu
-  @media $LandscapeMedium
+  @media $desktopMin
     pos fixed
-    z-index 10
+    z-index 11
     l -100%
     visibility hidden
     t 0
@@ -15,20 +15,20 @@
     padding 40px 15px
   &__list
     df(flex-start, space-between)
-    @media $LandscapeMedium
+    @media $desktopMin
       flex-direction column
       pr 0
       w 100%
   &__item
     pos relative
-    @media $LandscapeMin
+    @media $desktopMin
       w 100%
     &_tablet
-      @media $LandscapeMediumMin
+      @media $desktopMinFrom
         dn()
     & + &
       ml 19px
-      @media $LandscapeMedium
+      @media $desktopMin
         mt 30px
         ml 0
   &__href
@@ -39,7 +39,7 @@
     white-space nowrap
     @media $lDesktopMax
       fontify 16px 700 16px
-    @media $LandscapeMedium
+    @media $desktopMin
       fontify 24px 600 32px
     @media $lDesktopMaxFrom
       &_sub
@@ -51,7 +51,7 @@
           r -21px
           size 10px 6px
           background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGBAMAAAAI3hL1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEUAUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ7///89t3OTAAAAC3RSTlMAxscTzc/OFdPUFijyHU4AAAABYktHRAyBs1FjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wEfCyoTjp7P4gAAAC1JREFUCNdjEDJgYFZk8A5mMNvCULHVOHs6A/vstJ0FDAyVu6czMDCwuyxgAACaLgk4XJZVaAAAAABJRU5ErkJggg==') no-repeat center
-    @media $desktopMediumFrom
+    @media $desktopMinFrom
       &_sub
         mr 16px
         &:before
@@ -65,7 +65,12 @@
     &:hover
       c $blue
   &__sublist
-    @media $LandscapeMediumMin 
+    @media $desktopMin
+      mt 20px
+      &_lvl2
+        mt 20px
+        ml 20px
+    @media $desktopMinFrom
       visibility hidden
       opacity 0
       pos absolute
@@ -96,18 +101,19 @@
         opacity 1
         visibility visible
     &-item
-      @media $LandscapeMedium
+      @media $desktopMin
         & + &
-          mt 10px
+          mt 20px
     &-href
       db()
+      c black
       pos relative
-      color white
       fontify 18px 400 22px
       transition .7s background, .7s color
       @media $lDesktopMax
         fontify 16px 400 19px
-      @media $LandscapeMediumMin
+      @media $desktopMinFrom
+        c white
         padding 7px 35px 8px 19px
         &_sub:after
           content ""
@@ -121,19 +127,16 @@
         &_active
           bgc $dblue
           color white
-      @media $LandscapeMedium
+      @media $desktopMin
         fontify 20px 400 24px
+        &:hover,
         &_active
           color $dblue
 
 .burger
-  @media $LandscapeMediumMin
+  @media $desktopMinFrom
     dn()
   ml 30px
-  mt 11px
-  @media $LandscapeMin
-    mt 0
-    ml 0
   &__shadow
     pos fixed
     l 0
@@ -198,7 +201,7 @@
         transition .4s opacity .6s
 
 html:not(.touchevents)
-  .burger
+  .burger__button
     &:not(.open):hover
       &:before
         animation burger-hover 1s infinite ease-in-out alternate

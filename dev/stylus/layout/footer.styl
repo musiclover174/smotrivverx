@@ -6,6 +6,13 @@
   @media $lDesktopMax
     mt 132px
     pt 74px
+  @media $LandscapeMax
+    mt 95px
+  @media $LandscapeMedium
+    pt 50px
+  @media $PortraitMedium
+    pt 40px
+    pb 36px
   &_dark
     c $dark
     mt 0
@@ -24,12 +31,23 @@
       margin 0 -15px
     @media $desktopMedium
       margin 0 -10px
+    @media $LandscapeMin
+      &:first-child
+        dn()
     & + &
       pos relative
       mt 74px
       pt 53px
       @media $lDesktopMax
         pt 44px
+      @media $LandscapeMedium
+        mt 38px
+        justify-content space-between
+      @media $LandscapeMin
+        mt 0
+        pt 0
+      @media $PortraitMedium
+        flex-direction column
       & ^[0]__col_col4
         text-align right
       &:before
@@ -43,6 +61,8 @@
         @media $desktopMedium
           l 10px
           r 10px
+        @media $LandscapeMin
+          dn()
   &__col
     padding 0 22px
     @media $lDesktopMax
@@ -57,10 +77,14 @@
       max-width 50%
       &:last-child
         text-align right
-    @media $LandscapeMin
+    @media $LandscapeMedium
       &_menu
         dn()
-    @media $LandscapeMinFrom
+      &_info
+        df(flex-start, space-between)
+        flex 0 0 100%
+        max-width 100%
+    @media $LandscapeMediumMin
       &_col2
         flex 0 0 16.66666%
         max-width 16.66666%
@@ -93,6 +117,9 @@
         border-color transparent
       &_active
         opacity .75
+  &__copy
+    @media $PortraitMedium
+      mb 30px
   &__phones
     dfv()
     pos relative
@@ -121,6 +148,8 @@
     @media $lDesktopMax
       fontify 16px 400 26px
       mt 25px
+    @media $LandscapeMedium
+      mt 0
     &:before
       content ""
       pos absolute
@@ -142,6 +171,8 @@
     @media $lDesktopMax
       fontify 16px 400 20px
       mt 29px
+    @media $LandscapeMedium
+      mt 0
     &:before
       content ""
       pos absolute

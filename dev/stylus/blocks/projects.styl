@@ -2,18 +2,28 @@
   mt 177px
   @media $lDesktopMax
     mt 157px
+  @media $LandscapeMax
+    mt 95px
   &__top
+    @media $PortraitMaxFrom
+      df(center, flex-start)
     pos absolute
     l -5px
     t 746px
     width 747px
-    df(center, flex-start)
     transform rotate(90deg) scaleX(-1) scaleY(-1)
     transform-origin 0 0
     @media $lDesktopMax
       l -2px
       t 600px
       w 605px
+    @media $LandscapeMax
+      t 0
+      w 100%
+      l 0
+      transform none
+      pos relative
+      mb 60px
   &__car
     h 100%
     &-wrapper
@@ -23,6 +33,13 @@
       @media $lDesktopMax
         pl 111px
         h 640px
+      @media $LandscapeMax
+        pl 0
+        pos relative
+      @media $LandscapeMedium
+        max-height 80vh
+      @media $PortraitMedium
+        pr 35px
       .swiper-slide
         &-active ^[0]__item-img
           opacity 1
@@ -49,6 +66,7 @@
     transform translateX(-50%)
   &__item
     df(center, flex-start)
+    pos relative
     h 100%
     &-side
       w calc(50% + 78px)
@@ -58,6 +76,13 @@
       oh()
       @media $lDesktopMax
         w calc(50% + 70px)
+      @media $LandscapeMax
+        w calc(50% - 15px)
+        mr 30px
+      @media $PortraitMedium
+        pos absolute
+        size 100%
+        mr 0
     &-img
       pos absolute
       l 0
@@ -78,12 +103,24 @@
       @media $lDesktopMax
         padding 20px 0
         w calc(50% - 130px)
+      @media $LandscapeMax
+        w calc(50% - 15px)
+      @media $PortraitMedium
+        size 100%
+        pos relative
+        z-index 1
+        padding 30px
+        bgc alpha(black, .6)
+      @media $Mobile370
+        padding 20px
     &-date
       c alpha($dark, .5)
       fontify 16px 400 26px
       mb 11px
       @media $lDesktopMax
         fontify 14px 400 26px
+      @media $PortraitMedium
+        c alpha(white, .5)
     &-title
       c $dark
       fontify 26px 700 38px
@@ -91,5 +128,9 @@
       transition .7s border
       @media $lDesktopMax
         fontify 22px 700 32px
+      @media $LandscapeMax
+        fontify 18px 700 26px
+      @media $PortraitMedium
+        c white
       &:hover
         border-color transparent

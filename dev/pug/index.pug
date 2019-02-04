@@ -34,7 +34,7 @@ html
                   +e.more.btn(href="#") Узнать подробнее
           .swiper-pagination
 
-      +b('section').cats.js-cat.h-anim
+      +b('section').cats.js-cat
         +e('span').bg.js-cat-bg(style="background-image: url('img/cat-bg.jpg')")
         +e.list
           +e.item.js-cat-elem(data-bg="img/cat-bg.jpg", href="#")
@@ -261,6 +261,6 @@ html
                     a(href="#") Согласен на обработку персональных данных
                 button.common__submit.btn.btn_empty(type="submit") Отправить
 
-    include layout/__scripts
     include layout/__footer
     include layout/__popup
+    include layout/__scripts

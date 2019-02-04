@@ -67,10 +67,11 @@ export default class Index {
         prevEl: `${this.popularClass} ~ .swiper-buttons .swiper-button-prev`,
       },
       breakpoints: {
-        650: {
+        670: {
           slidesPerView: 1,
+          spaceBetween: 20,
         },
-        900: {
+        1000: {
           slidesPerView: 2,
         },
       },
@@ -78,20 +79,22 @@ export default class Index {
   }
 
   galleryInit() {
-    const galleryCarousel = new Swiper(this.galleryClass, {
-      speed: 1500,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      effect: 'fade',
-      simulateTouch: false,
-      fadeEffect: {
-        crossFade: true,
-      },
-      autoplay: {
-        delay: 5000,
-      },
-    });
+    if (window.screen.width < 850) {
+      const galleryCarousel = new Swiper(this.galleryClass, {
+        speed: 1500,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        effect: 'fade',
+        simulateTouch: false,
+        fadeEffect: {
+          crossFade: true,
+        },
+        autoplay: {
+          delay: 5000,
+        },
+      });
+    }
   }
 
   developersInit() {
@@ -105,10 +108,10 @@ export default class Index {
         prevEl: `${this.developersClass} ~ .swiper-buttons .swiper-button-prev`,
       },
       breakpoints: {
-        650: {
+        800: {
           slidesPerView: 2,
         },
-        900: {
+        1000: {
           slidesPerView: 3,
         },
       },
@@ -131,6 +134,12 @@ export default class Index {
         el: `${this.projectsClass} ~ .swiper-buttons .swiper-pagination`,
         type: 'bullets',
         clickable: true,
+      },
+      breakpoints: {
+        800: {
+          allowTouchMove: false,
+          slidesPerView: 2,
+        },
       },
     });
   }

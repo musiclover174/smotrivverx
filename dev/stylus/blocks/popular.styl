@@ -5,25 +5,36 @@
   z-index 1
   @media $lDesktopMax
     padding 133px 0 98px
+  @media $LandscapeMax
+    padding 95px 0 88px
   &__top
     max-width 1252px
-    df(center, flex-start)
+    @media $PortraitMaxFrom
+      df(center, flex-start)
     @media $lDesktopMax
       max-width 1012px
+    @media $desktopMin
+      max-width 100%
   &__car
     &-wrapper
       pos relative
       mt 56px
       @media $lDesktopMax
         mt 46px
+      @media $desktopMin
+        mt 96px
       .swiper-slide
         pt 28px
         pl 48px
+        @media $Mobile370
+          pl 30px
       .swiper-buttons
         pos absolute
         z-index 1
         r 0
         t -68px
+        @media $desktopMin
+          t -48px
   &__item
     pos relative
     bgc white
@@ -32,22 +43,32 @@
     mb 93px
     @media $lDesktopMax
       padding 119px 40px 33px
+    @media $LandscapeMax
+      mb 0
+    @media $PortraitMedium
+      padding 119px 30px 33px
+    @media $Mobile370
+      padding 119px 20px 23px
     &-img
       size 100%
-      transform rotate3d(-1, 0, 0, 60deg)
-      transform-origin top left
-      transition 1s transform
-      will-change transform
-      ^[-1]:hover &
-        transform rotate3d(0, 0, 0, 0)
+      @media $LandscapeMaxFrom
+        transform rotate3d(-1, 0, 0, 60deg)
+        transform-origin top left
+        transition 1s transform
+        will-change transform
+        ^[-1]:hover &
+          transform rotate3d(0, 0, 0, 0)
       &over
-        perspective 1000px
+        @media $LandscapeMaxFrom
+          perspective 1000px
         pos absolute
         l -48px
         t -28px
         size 219px
         @media $lDesktopMax
           size 156px
+        @media $Mobile370
+          l -30px
     &-cost
       c $blue
       fontify 24px 700 26px
@@ -69,21 +90,24 @@
         c $blue
         border-color transparent
     &-bottom
-      pos absolute
-      t 100%
-      w 100%
-      l 0
-      padding 0 49px 50px
-      bgc white
-      visibility hidden
-      opacity 0
-      transition .7s visibility, .7s opacity, .7s top
-      @media $lDesktopMax
+      @media $LandscapeMax
+        mt 30px
+      @media $LandscapeMaxFrom
+        pos absolute
+        t 100%
+        w 100%
+        l 0
+        padding 0 49px 50px
+        bgc white
+        visibility hidden
+        opacity 0
+        transition .7s visibility, .7s opacity, .7s top
+        ^[-1]:hover &
+          visibility visible
+          opacity 1
+          t calc(100% - 10px)
+      @media (min-width:1001px) and (max-width:1679px)
         padding 0 40px 40px
-      ^[-1]:hover &
-        visibility visible
-        opacity 1
-        t calc(100% - 10px)
     &-btn
       w 100%
       text-align center

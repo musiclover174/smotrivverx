@@ -2,15 +2,21 @@
   mt 149px
   @media $lDesktopMax
     mt 117px
+  @media $LandscapeMax
+    mt 95px
   &__car
     &-wrapper
       pos relative
       mt 75px
+      @media $PortraitMedium
+        mt 40px
       .swiper-buttons
         pos absolute
         z-index 1
         r 0
         t -96px
+        @media $PortraitMedium
+          t -61px
     .swiper-slide
       dfv(center, center)
       h 100px
@@ -23,7 +29,7 @@
         l -1px
         mt -25px
   &__img
-    max-width 100%
+    max-width 75%
     max-height 95%
     opacity .3
     filter grayscale(100%)
