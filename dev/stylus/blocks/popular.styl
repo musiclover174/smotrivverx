@@ -3,13 +3,19 @@
   oh()
   pos relative
   z-index 1
+  @media $lDesktopMax
+    padding 133px 0 98px
   &__top
     max-width 1252px
     df(center, flex-start)
+    @media $lDesktopMax
+      max-width 1012px
   &__car
     &-wrapper
       pos relative
       mt 56px
+      @media $lDesktopMax
+        mt 46px
       .swiper-slide
         pt 28px
         pl 48px
@@ -24,6 +30,8 @@
     padding 166px 49px 43px
     text-align right
     mb 93px
+    @media $lDesktopMax
+      padding 119px 40px 33px
     &-img
       size 100%
       transform rotate3d(-1, 0, 0, 60deg)
@@ -38,17 +46,25 @@
         l -48px
         t -28px
         size 219px
+        @media $lDesktopMax
+          size 156px
     &-cost
       c $blue
       fontify 24px 700 26px
+      @media $lDesktopMax
+        fontify 20px 700 22px
     &-hrefover
       margin 15px 0 0 auto
       max-width 252px
+      @media $lDesktopMax
+        mt 10px
     &-href
       c $dark
       fontify 18px 400 28px
       border-bottom 1px solid $blue
       transition .7s border-color, .7s color
+      @media $lDesktopMax
+        fontify 16px 400 26px
       &:hover
         c $blue
         border-color transparent
@@ -62,6 +78,8 @@
       visibility hidden
       opacity 0
       transition .7s visibility, .7s opacity, .7s top
+      @media $lDesktopMax
+        padding 0 40px 40px
       ^[-1]:hover &
         visibility visible
         opacity 1

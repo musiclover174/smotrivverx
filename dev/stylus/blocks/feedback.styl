@@ -1,7 +1,11 @@
 .feedback
   mt 159px
+  @media $lDesktopMax
+    mt 140px
   &__inner
     padding 72px 137px 80px
+    @media $lDesktopMax
+      padding 66px 105px 80px
   &__form
     mt 47px
     &-top
@@ -14,3 +18,5 @@
     .common__subtitle
       ml 74px
       max-width 410px
+      @media $lDesktopMax
+        ml 66px

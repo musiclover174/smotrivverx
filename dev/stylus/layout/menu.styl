@@ -37,9 +37,11 @@
     fontify 18px 700 18px
     transition .7s color
     white-space nowrap
+    @media $lDesktopMax
+      fontify 16px 700 16px
     @media $LandscapeMedium
       fontify 24px 600 32px
-    @media $LandscapeMediumMin
+    @media $lDesktopMaxFrom
       &_sub
         mr 20px
         &:before
@@ -47,6 +49,16 @@
           pos absolute
           t 12px
           r -21px
+          size 10px 6px
+          background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGBAMAAAAI3hL1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEUAUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ7///89t3OTAAAAC3RSTlMAxscTzc/OFdPUFijyHU4AAAABYktHRAyBs1FjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wEfCyoTjp7P4gAAAC1JREFUCNdjEDJgYFZk8A5mMNvCULHVOHs6A/vstJ0FDAyVu6czMDCwuyxgAACaLgk4XJZVaAAAAABJRU5ErkJggg==') no-repeat center
+    @media $desktopMediumFrom
+      &_sub
+        mr 16px
+        &:before
+          content ""
+          pos absolute
+          t 10px
+          r -16px
           size 10px 6px
           background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGBAMAAAAI3hL1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEUAUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ7///89t3OTAAAAC3RSTlMAxscTzc/OFdPUFijyHU4AAAABYktHRAyBs1FjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wEfCyoTjp7P4gAAAC1JREFUCNdjEDJgYFZk8A5mMNvCULHVOHs6A/vstJ0FDAyVu6czMDCwuyxgAACaLgk4XJZVaAAAAABJRU5ErkJggg==') no-repeat center
     &_active,
@@ -93,6 +105,8 @@
       color white
       fontify 18px 400 22px
       transition .7s background, .7s color
+      @media $lDesktopMax
+        fontify 16px 400 19px
       @media $LandscapeMediumMin
         padding 7px 35px 8px 19px
         &_sub:after

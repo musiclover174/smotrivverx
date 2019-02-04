@@ -1,13 +1,17 @@
 .header
   bgc white
+  @media $lDesktopMaxFrom
+    padding 0 90px
+    max-width 1600px
+  @media (min-width:1271px) and (max-width:1679px)
+    padding 0 40px
+    max-width 1266px
   @media $LandscapeMinFrom
     df(center, space-between)
     pos absolute
     z-index 2
     w 100%
     h 100px
-    padding 0 90px
-    max-width 1600px
     l 50%
     t 40px
     transform translateX(-50%)
@@ -42,6 +46,8 @@
     c black
     fontify 18px 700 18px
     white-space nowrap
+    @media $lDesktopMax
+      fontify 16px 700 16px
   &__feed
     ib()
     mr 3px

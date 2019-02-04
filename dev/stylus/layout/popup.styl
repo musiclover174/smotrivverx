@@ -50,19 +50,11 @@
   &__title
     pos relative
     z-index 1
-    font-family $lf
     c $blue
     fontify 48px 700 48px
     mb 5px
-    &:before
-      content attr(data-text)
-      pos absolute
-      z-index -1
-      color $shadow
-      w calc(100% + 10px)
-      l 10px
-      t 10px
-      transition .7s 1s left, .7s 1s top
+    @media $lDesktopMax
+      fontify 38px 700 38px
   &__subtitle
     color black
     fontify 16px 400 26px

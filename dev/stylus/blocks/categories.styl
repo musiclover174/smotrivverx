@@ -5,6 +5,8 @@
   &__list
     font-size 0
     h 100vh
+    @media $lDesktopMax
+      h 540px
   &__item
     ib()
     h 50%
@@ -34,6 +36,9 @@
       fontify 24px 700 30px
       border-bottom 1px solid transparent
       transition .7s border
+      @media $lDesktopMax
+        fontify 20px 700 24px
+        mt 30px
       ^[-1]:hover &
         border-color white
   &__bg

@@ -3,6 +3,9 @@
   pt 70px
   pb 46px
   c white
+  @media $lDesktopMax
+    mt 132px
+    pt 74px
   &_dark
     c $dark
     mt 0
@@ -17,13 +20,18 @@
     flex-wrap wrap
     ml -22px
     mr -22px
+    @media $lDesktopMax
+      margin 0 -15px
     @media $desktopMedium
-      ml -10px
-      mr -10px
+      margin 0 -10px
     & + &
       pos relative
       mt 74px
       pt 53px
+      @media $lDesktopMax
+        pt 44px
+      & ^[0]__col_col4
+        text-align right
       &:before
         content ""
         pos absolute
@@ -37,6 +45,8 @@
           r 10px
   &__col
     padding 0 22px
+    @media $lDesktopMax
+      padding 0 15px
     @media $desktopMedium
       padding 0 10px
     @media $PortraitMedium
@@ -65,6 +75,8 @@
       mt 10px
     &_parent + &
       mt 14px
+      @media $lDesktopMax
+        mt 17px
     &_parent
       font-weight 700
       & + &
@@ -74,6 +86,8 @@
       fontify 18px inherit 28px
       border-bottom 1px solid alpha(white, .5)
       transition .7s border-color
+      @media $lDesktopMax
+        fontify 16px inherit 26px
       &:hover,
       &_active
         border-color transparent
@@ -90,9 +104,13 @@
       t 8px
       size 17px
       background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAsVBMVEUAUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ7///9zoLn8AAAAOXRSTlMAX+wtYPy3Wz/uxvMowa8BdvoKFFl35xsE0BEr8tUdBkkQSvnoCLXpYgJU+Mg0R+vT/WEHfBJ1xfFyUwAiAAAAAWJLR0Q6TgnE+gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+MCAQ0HMhE2o50AAACMSURBVBjTVc7HDsJADARQU5YQCD2U0ELvNdT5/x/D1i6S1wcfnjRjE1EuXyBvigYlDwIDoKwlZEBFS1UEkZKaQL2hpMnQautUR2Kxd6zL0utrGSRMyVDTaMw0mRKls7mjxZJpFa832O72lg5COMo6nS1d7J8yVxeMbg7u2b/+8ZR+mEydfL0/3zAg+gHRKxVXo0RAyAAAAABJRU5ErkJggg==') no-repeat center
+      @media $lDesktopMax
+        t 6px
   &__phone
     c inherit
     fontify 18px 700 28px
+    @media $lDesktopMax
+      fontify 16px 700 26px
     & + &
       mt 10px
   &__address
@@ -100,6 +118,9 @@
     fontify 18px 400 28px
     pl 31px
     mt 22px
+    @media $lDesktopMax
+      fontify 16px 400 26px
+      mt 25px
     &:before
       content ""
       pos absolute
@@ -107,6 +128,8 @@
       t 6px
       size 15px 19px
       background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAATCAMAAAB4HKeYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAmVBMVEUAUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ7///+gIwBHAAAAMXRSTlMAAlSw5vyxVx/Jyxzj6B0BxchWsuFFDOlEQOQG++66C+C9ZGkJ520EyifwTmb+av3ttecPfQAAAAFiS0dEMkDSTMgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAgENCARZFCrLAAAAlklEQVQY01WP1xKCMBBFL0gUC6I0sWBFejH//3NmE8RwXvae2eTOLAAY5sxi1nxhQGIvuWJlk643/IezBdwd/7N34XEdEz6NIIzCgIKPA41Y9BwpnCCfRcLPFC5IJvsEV/k/vsV3Cg88J/0vpG9NnRTINM9ET16MWuR0QFkNWpXqwJpJZTUGmlZo22Ck63nfQcP7eCp8AU7pIqADuUsjAAAAAElFTkSuQmCC') no-repeat center
+      @media $lDesktopMax
+        t 4px
   &__mail
     pos relative
     ib()
@@ -116,6 +139,9 @@
     ml 31px
     mt 27px
     transition .7s border
+    @media $lDesktopMax
+      fontify 16px 400 20px
+      mt 29px
     &:before
       content ""
       pos absolute
@@ -123,6 +149,9 @@
       t 6px
       size 21px 15px
       background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAPCAMAAAA8hHRZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAilBMVEUAUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ7///8AXmxVAAAALHRSTlMAAXPt7gWO/mlN7ExosBMew6/hOgSH/Tn7d0bquBUZvhjkQQNQ/H4wkIkGkYCRWaUAAAABYktHRC3N2kE9AAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wIBDQgOucHD1QAAAIxJREFUGNN10N0SQlAABOA9fkuFhPx2cKJi3//5KmYMjfZq97tcCE3nOoYmANOyV2hbJrAT2DsLdA4QR/DkwvNn9D24Z4IMLgijeLQ4CnEN+FUmqUCWf0qeQaQJJyWLEjdJWaEsxj0p6wbqrtDUXCrbTkF1LddKyoecO7iVP6pvoI7nhr7QD8bvZ0P/BvRcLCJXJYHDAAAAAElFTkSuQmCC') no-repeat center
+      @media $lDesktopMax
+        l -31px
+        t 4px
     &:hover
       border-color transparent
   &__dextra

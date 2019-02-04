@@ -1,5 +1,7 @@
 .projects
   mt 177px
+  @media $lDesktopMax
+    mt 157px
   &__top
     pos absolute
     l -5px
@@ -8,12 +10,19 @@
     df(center, flex-start)
     transform rotate(90deg) scaleX(-1) scaleY(-1)
     transform-origin 0 0
+    @media $lDesktopMax
+      l -2px
+      t 600px
+      w 605px
   &__car
     h 100%
     &-wrapper
       h 805px
       pl 140px
       pr 60px
+      @media $lDesktopMax
+        pl 111px
+        h 640px
       .swiper-slide
         &-active ^[0]__item-img
           opacity 1
@@ -47,6 +56,8 @@
       pos relative
       min-height 100%
       oh()
+      @media $lDesktopMax
+        w calc(50% + 70px)
     &-img
       pos absolute
       l 0
@@ -64,14 +75,21 @@
       visibility hidden
       opacity 0
       transition .7s opacity, .7s visibility
+      @media $lDesktopMax
+        padding 20px 0
+        w calc(50% - 130px)
     &-date
       c alpha($dark, .5)
       fontify 16px 400 26px
       mb 11px
+      @media $lDesktopMax
+        fontify 14px 400 26px
     &-title
       c $dark
       fontify 26px 700 38px
       border-bottom 1px solid $blue
       transition .7s border
+      @media $lDesktopMax
+        fontify 22px 700 32px
       &:hover
         border-color transparent

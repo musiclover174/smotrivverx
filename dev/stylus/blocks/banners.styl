@@ -23,6 +23,8 @@
     max-width 555px
     bgc white
     padding 40px 67px
+    @media $lDesktopMax
+      max-width 530px
   &__img
     pos absolute
     t 0
@@ -36,13 +38,14 @@
   &__title
     c $dark
     fontify 48px 700 58px
-    @media $desktopMedium
-      fontify 50px 700 50px
-    @media $LandscapeMedium
-      fontify 40px 700 40px
+    @media $lDesktopMax
+      fontify 38px 700 48px
   &__text
     c $dark
     fontify 18px 400 28px
     mt 10px
+    @media $lDesktopMax
+      fontify 16px 400 26px
+      mt 13px
   &__more
     mt 25px

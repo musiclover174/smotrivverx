@@ -1,24 +1,37 @@
 .features
   padding 160px 0
+  @media $lDesktopMax
+    padding 138px 0
   &__top
     pos absolute
     l -5px
     t 663px
-    width 694px
+    w 694px
     df(center, flex-start)
     transform rotate(90deg) scaleX(-1) scaleY(-1)
     transform-origin 0 0
+    @media $lDesktopMax
+      l -2px
+      t 500px
+      w 529px
   &__block
     pl 230px
     df(center, flex-start)
+    @media $lDesktopMax
+      pl 190px
+      align-items flex-start
   &__list
     df(flex-start, space-between)
     flex-wrap wrap
     w calc(50% - 97px)
     pt 35px
+    @media $lDesktopMax
+      pt 22px
   &__item
     w calc(50% - 22px)
     mb 50px
+    @media $lDesktopMax
+      mb 42px
     &-iconover
       df(flex-end, flex-start)
       h 75px
@@ -29,6 +42,9 @@
       c $dark
       fontify 18px 700 22px
       mt 24px
+      @media $lDesktopMax
+        fontify 16px 700 20px
+        mt 16px
   &__gallery
     &-bg
       pos absolute
@@ -36,10 +52,16 @@
       b -160px
       l calc(50% - 30px)
       w 40vw
+      @media $lDesktopMax
+        t -138px
+        b -138px
     &-wrapper
       pos relative
       w calc(50% + 77px)
       ml 20px
+      @media $lDesktopMax
+        ml 55px
+        w calc(50% + 42px)
     &-car
       w calc(100% - 60px)
       ml 0
