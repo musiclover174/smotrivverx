@@ -5,7 +5,7 @@ import {
   qsAll,
 } from './modules/helpers';
 import Index from './modules/index';
-// import Popup from './modules/popup';
+import Popup from './modules/popup';
 import Forms from './modules/forms';
 import Burger from './modules/burger';
 
@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const forms = new Forms();
   }
 
-  // if (qs('[data-popup]')) {
-  //   window.popup = new Popup('[data-popup]');
-  // }
+  if (qs('[data-popup]')) {
+    window.popup = new Popup('[data-popup]');
+  }
 
   resizeWatcher();
   let eventScroll;

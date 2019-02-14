@@ -15,9 +15,10 @@ export default class Popup {
     const that = this;
 
     qsAll(this.els).forEach((el) => {
-      el.addEventListener('click', () => {
+      el.addEventListener('click', (e) => {
         that.popupOpen(el.getAttribute('data-src'));
         if (that.callback) that.callback();
+        e.preventDefault();
       });
     });
 

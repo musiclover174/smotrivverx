@@ -17,11 +17,13 @@ html
               +e('span').delim / 
             ul
               li
-                a(href="index") Главная
+                a(href="#", data-popup ,data-src="#feed") Обратная связь
               li
-                a(href="text") Типовая текстовая
+                a(href="#", data-popup ,data-src="#call") Заказать звонок
               li
-                a(href="popups") Типовая текстовая
+                a(href="#", data-popup ,data-src="#order") Заявка на расчет
+              li
+                a(href="#", data-popup ,data-src="#text") Текстовый попап
        
     include layout/__footer
     include layout/__popup

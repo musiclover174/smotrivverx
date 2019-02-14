@@ -89,6 +89,7 @@
                                                     <ul>
                                                       <li><a href="index">Главная</a></li>
                                                       <li><a href="text">Типовая текстовая</a></li>
+                                                      <li><a href="popups">Типовая текстовая</a></li>
                                                     </ul>
                                                   </div>
                                 </section>
@@ -172,6 +173,138 @@
                                     </div>
                   </div>
                 </footer>
+    <div class="hidden-block">
+      <div class="popup__over"><span class="popup__bg js-popbg"></span>
+                    <div class="popup sharp sharp_grey" id="feed">
+                                      <button class="popup__close js-popclose" type="button" title="Закрыть">
+                                      </button>
+                                      <p class="popup__title">Обратная связь
+                                      </p>
+                                      <p class="popup__subtitle">Заполните поля ниже и наши менеджеры свяжутся с Вами в самое ближайшее время.
+                                      </p>
+                                      <p class="popup__hint">Обратите внимание на то, что поля со звёздочкой обязательны для заполнения.
+                                      </p>
+                                      <form class="popup__form">
+                                        <div class="common__row">
+                                          <input class="common__input" type="text" data-req="req">
+                                          <label class="common__placeholder">Ваше имя<span>*</span></label>
+                                        </div>
+                                        <div class="common__row">
+                                          <input class="common__input js-phone" type="text" data-req="req">
+                                          <label class="common__placeholder">Телефон<span>*</span></label>
+                                        </div>
+                                        <div class="common__row">
+                                          <input class="common__input" type="text" data-req="req">
+                                          <label class="common__placeholder">Электронная почта<span>*</span></label>
+                                        </div>
+                                        <div class="common__row">
+                                          <textarea class="common__textarea common__textarea_shorten"></textarea>
+                                          <label class="common__placeholder">Текст сообщения<span>*</span></label>
+                                        </div>
+                                        <div class="common__row">
+                                          <div class="common__fileover">
+                                            <input class="common__file js-common-fileinput" type="file" name="" data-req="req" data-type="file" id="file1">
+                                            <label class="common__filename js-common-file" for="file1" data-default="Прикрепить файл">Прикрепить файл</label>
+                                            <button class="common__filedelete js-common-filedelete" type="button"></button>
+                                          </div>
+                                        </div>
+                                        <div class="common__row"><img src="img/captcha.png" style="max-width: 100%;"></div>
+                                        <div class="common__row">
+                                          <div class="fakecheckbox">
+                                            <input class="fakecheckbox__truecheck" type="checkbox" value="" name="agreement" checked id="agreement">
+                                            <label class="fakecheckbox__label" for="agreement">Согласен на <a href="#">обработку персональных данных</a></label>
+                                          </div>
+                                        </div>
+                                        <div class="common__row">
+                                          <button class="common__submit btn" type="submit">Отправить</button>
+                                        </div>
+                                      </form>
+                    </div>
+                    <div class="popup sharp sharp_grey" id="order">
+                                      <button class="popup__close js-popclose" type="button" title="Закрыть">
+                                      </button>
+                                      <p class="popup__title">Заявка на расчет
+                                      </p>
+                                      <p class="popup__subtitle">Заполните поля ниже и наши менеджеры свяжутся с Вами в самое ближайшее время.
+                                      </p>
+                                      <p class="popup__hint">Обратите внимание на то, что поля со звёздочкой обязательны для заполнения.
+                                      </p>
+                                      <form class="popup__form">
+                                        <div class="common__row">
+                                          <input class="common__input" type="text" data-req="req">
+                                          <label class="common__placeholder">Ваше имя<span>*</span></label>
+                                        </div>
+                                        <div class="common__row">
+                                          <input class="common__input js-phone" type="text" data-req="req">
+                                          <label class="common__placeholder">Телефон<span>*</span></label>
+                                        </div>
+                                        <div class="common__row">
+                                          <input class="common__input" type="text" data-req="req">
+                                          <label class="common__placeholder">Электронная почта<span>*</span></label>
+                                        </div>
+                                        <div class="common__row">
+                                          <textarea class="common__textarea common__textarea_shorten"></textarea>
+                                          <label class="common__placeholder">Текст сообщения<span>*</span></label>
+                                        </div>
+                                        <div class="common__row">
+                                          <div class="common__fileover">
+                                            <input class="common__file js-common-fileinput" type="file" name="" data-req="req" data-type="file" id="file1">
+                                            <label class="common__filename js-common-file" for="file1" data-default="Прикрепить файл">Прикрепить файл</label>
+                                            <button class="common__filedelete js-common-filedelete" type="button"></button>
+                                          </div>
+                                        </div>
+                                        <div class="common__row"><img src="img/captcha.png" style="max-width: 100%;"></div>
+                                        <div class="common__row">
+                                          <div class="fakecheckbox">
+                                            <input class="fakecheckbox__truecheck" type="checkbox" value="" name="agreement" checked id="agreement">
+                                            <label class="fakecheckbox__label" for="agreement">Согласен на <a href="#">обработку персональных данных</a></label>
+                                          </div>
+                                        </div>
+                                        <div class="common__row">
+                                          <button class="common__submit btn" type="submit">Отправить</button>
+                                        </div>
+                                      </form>
+                    </div>
+                    <div class="popup sharp sharp_grey" id="call">
+                                      <button class="popup__close js-popclose" type="button" title="Закрыть">
+                                      </button>
+                                      <p class="popup__title">Заказать звонок
+                                      </p>
+                                      <p class="popup__subtitle">Заполните поля ниже и наши менеджеры свяжутся с Вами в самое ближайшее время.
+                                      </p>
+                                      <p class="popup__hint">Обратите внимание на то, что поля со звёздочкой обязательны для заполнения.
+                                      </p>
+                                      <form class="popup__form">
+                                        <div class="common__row">
+                                          <input class="common__input" type="text" data-req="req">
+                                          <label class="common__placeholder">Ваше имя<span>*</span></label>
+                                        </div>
+                                        <div class="common__row">
+                                          <input class="common__input js-phone" type="text" data-req="req">
+                                          <label class="common__placeholder">Телефон<span>*</span></label>
+                                        </div>
+                                        <div class="common__row"><img src="img/captcha.png" style="max-width: 100%;"></div>
+                                        <div class="common__row">
+                                          <div class="fakecheckbox">
+                                            <input class="fakecheckbox__truecheck" type="checkbox" value="" name="agreement" checked id="agreement">
+                                            <label class="fakecheckbox__label" for="agreement">Согласен на <a href="#">обработку персональных данных</a></label>
+                                          </div>
+                                        </div>
+                                        <div class="common__row">
+                                          <button class="common__submit btn" type="submit">Отправить</button>
+                                        </div>
+                                      </form>
+                    </div>
+                    <div class="popup sharp sharp_grey" id="text">
+                                      <button class="popup__close js-popclose" type="button" title="Закрыть">
+                                      </button>
+                                      <p class="popup__title" data-text="Текстовый попап">Текстовый попап
+                                      </p>
+                                      <p class="popup__subtitle">Обратите внимание на то, что это текстовый попап для того, чтобы показать, что он вообще есть и им можно пользоваться, не боясь!
+                                      </p>
+                    </div>
+      </div>
+    </div>
     <script type="text/javascript" src="static/js/polyfill.js"></script>
     <script type="text/javascript" src="static/js/vendor.js"></script>
     <script type="text/javascript" src="static/js/script.js"></script>
