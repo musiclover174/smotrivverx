@@ -1,0 +1,125 @@
+.card
+  &__wrapper
+    df()
+    @media $desktopTablet
+      flex-direction column
+  &__sidebar
+    w 570px
+    mr 70px
+    @media $desktopMax
+      w 452px
+      mr 48px
+    @media $desktopTablet
+      w 100%
+      mr 0
+      height auto !important
+  &__img
+    border 1px solid #e0e0e0
+    padding 18px
+    max-width 100%
+    @media $desktopTablet
+      max-width 400px
+      position initial !important
+      transform none !important
+    @media $PortraitMedium
+      max-width 100%
+  &__info
+    w calc(100% - 640px)
+    @media $desktopMax
+      w calc(100% - 500px)
+    @media $desktopTablet
+      w 100%
+      mt 40px
+    &-row
+      mb 50px
+      @media $PortraitMedium
+        mb 40px
+      &:first-child
+        border-bottom 1px solid #e0e0e0
+        pb 60px
+        @media $PortraitMedium
+          pb 40px
+      &_serts
+        mt 74px
+        mb 31px
+        border 1px solid #e0e0e0
+        padding 42px 80px 38px
+        @media $desktopMax
+          mt 64px
+          padding 33px 58px 23px
+        @media $PortraitMedium
+          mb 0
+          mt 40px
+          padding 0
+          border none
+    &-title
+      c $dark
+      fontify 38px 700 44px
+      mb 22px
+      @media $desktopMax
+        fontify 26px 700 30px
+    &-cost
+      ib()
+      c $blue
+      fontify 38px 700 38px
+      mr 42px
+      @media $desktopMax
+        mr 32px
+      @media $PortraitMax
+        db()
+        mr 0
+  &__btn
+    mt -8px
+    padding 0 26px 4px
+    font-size 16px
+    line-height 44px
+    @media $PortraitMax
+      line-height 32px
+      mt 25px
+    &:after
+      mt 17px
+      @media $PortraitMax
+        mt 11px
+  &__serts
+    df()
+    flex-wrap wrap
+    ml -44px
+    w calc(100% + 44px)
+    pt 2px
+    @media $desktopMax
+      pt 5px
+      ml -30px
+      w calc(100% + 30px)
+    &-item
+      pos relative
+      w calc(50% - 44px)
+      ml 44px
+      mb 20px
+      pl 53px
+      @media $desktopMax
+        ml 30px
+        w calc(50% - 30px)
+      @media $PortraitMax
+        w calc(100% - 30px)
+      &:before
+        content ""
+        pos absolute
+        l 0
+        t 9px
+        size 34px 42px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAqBAMAAAAkOpScAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEUAUZ4AUZ4AUZ4AUZ7///8D+lBiAAAAA3RSTlMAFdRMfTQHAAAAAWJLR0QEj2jZUQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+MCDw4PBhrCFEoAAABGSURBVCjPYzBGBwxYRBhQAVVFmOH2GOAUGaQm4xWhZ/jQToQ6voCHDG4RISMBNBFGZUU0EaAidBFGZXQRBiG01AtUhCoCAB1LNhkFrfXuAAAAAElFTkSuQmCC') no-repeat center
+    &-href
+      c $dark
+      fontify 18px 400 28px
+      border-bottom 1px solid $blue
+      transition .7s border-color
+      @media $desktopMax
+        fontify 16px 400 26px
+      &:hover
+        border-color transparent
+    &-info
+      mt 1px
+      c alpha($dark, .5)
+      fontify 18px 400 28px
+      @media $desktopMax
+        fontify 16px 400 26px

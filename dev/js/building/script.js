@@ -10,6 +10,7 @@ import Forms from './modules/forms';
 import Burger from './modules/burger';
 import Contacts from './modules/contacts';
 import Projects from './modules/projects';
+import Sticky from './modules/sticky';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = new Burger();
@@ -49,6 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightBox = GLightbox({
       selector: 'glightbox',
     });
+  }
+
+  if (document.querySelector('.js-sticky')) {
+    const top = window.innerWidth < 1170 ? 110 : 20;
+    const sticky = new Sticky(top, 20);
   }
 
   resizeWatcher();

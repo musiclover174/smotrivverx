@@ -1,0 +1,98 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+
+    +b('main').main
+      +b('section').top
+        .container
+          +b('section').breadcrumbs
+            +e.href(href="#") Главная
+            +e('span').delim / 
+            +e.href(href="#") Каталог
+            +e('span').delim / 
+          h1 Потолочная плита Armstrong BAJKAL board <br>600x600x12
+
+      +b('section').card
+        .container
+          +e.wrapper.js-sticky-parent
+            +e('aside').sidebar.js-sticky
+              +e.img.js-sticky-inner(src="img/card1.jpg")
+            +e.info
+              +e.info-row
+                +e('p').info-title Цена
+                +e.info-text
+                  +e('p').info-cost 224,65 ₽/м²
+                  +e.btn.btn.btn_empty(href="#", data-popup ,data-src="#order") Заявка на расчет
+              +e.info-row
+                +e('p').info-title Описание
+                +e.info-text
+                  p Структурированная поверхность потолочной панели «Байкал» с тиснением придает дизайну легкость и своеобразный шарм. Выгодное отличие продукции – ее легкость и экологичность. Подвесной потолок хорошо удерживает тепло, не пропускает лишние звуки, так что, устанавливая в квартире или офисе «армстронг  байкал», вы получаете качественное и недорогое изделие, которое прослужит несколько лет. Продажа подвесного потолка байкал осуществляется со склада в Москве или доставляем по МО и РФ. Стоимость потолочной панели Байкал Армстронг зависит от количества приобретаемой продукции. 
+              +e.info-row
+                +e('p').info-title Характеристики
+                +e.info-text 
+                  table(style="width: 100%")
+                    tbody
+                      tr
+                        td Производитель
+                        td(style="text-align: right") Италия
+                      tr
+                        td Длина панели (мм)
+                        td(style="text-align: right") 600 мм
+                      tr
+                        td Ширина панели (мм)
+                        td(style="text-align: right") 600 мм
+                      tr
+                        td Толщина панели (мм)
+                        td(style="text-align: right") 12 мм
+              +e.info-row
+                +e('p').info-title Потолок армстронг Байкал - недорогое интерьерное решение
+                +e.info-text
+                  p ООО «ОптСтрой» предлагает низкую цену на подвесной потолок армстронг «Байкал». Потолок этой серии входит в линейку товаров такого крупного европейского производителя, как Armstrong. Сегодня потолок армстронг байкал получил распространение на рынке России благодаря приемлемой стоимости и достойному уровню качества. Строгий и лаконичный дизайн, который создается в этом случае, идеально подойдет для оформления административных, медицинских, учебных и других официальных заведений. Широкое распространение подвесные потолки Armstrong Bajkal получили и в офисах, торговых центрах и гостиницах.
+                  p Они идеальны в том случае, если необходимо скрыть инженерные системы или снизить излишнюю высоту помещения. В разделе «Цена – плита потолочная «Байкал», указана стоимость за квадратный метр.  Для комплектации подвесной системой необходимо будет доплатить от сорока пяти до шестидесяти рублей за квадратный метр. Более точные расчеты могут провести менеджеры. Также оказываются консультации по подбору продукта. 
+              +e.info-row._serts
+                +e('p').info-title Сертификаты и буклеты
+                +e('ul').serts
+                  +e.serts-item
+                    +e.serts-href(href="#") Минераловолокнистые потолки Армстронг Пожар_11_08_2019
+                    +e('p').serts-info .pdf, 1.56 мб
+                  +e.serts-item
+                    +e.serts-href(href="#") Экспертное заключение Россия
+                    +e('p').serts-info .pdf, 654 кб
+
+              a(href="#").common__back Вернуться в каталог
+
+      +b('section').banner.banner_carousel
+        .container
+          +e.car._inner.swiper-container.js-banner
+            .swiper-wrapper
+              .swiper-slide
+                +e.img(src="img/banner2.jpg")
+                .container
+                  +e.block._larger
+                    +e('p').title Монтаж подвесных потолков Армстронг со скидкой 20%
+                    +e('p').text Краткое описание акции в несколько строк, чтобы показать примерный объем текста данного блока.
+                    +e.more.btn.btn_empty(href="#", data-popup ,data-src="#call") Сделать заказ
+              .swiper-slide
+                +e.img(src="img/banner2.jpg")
+                .container
+                  +e.block._larger
+                    +e('p').title Короткий заголовок
+                    +e('p').text Одним из самых распространённых видов подвесного потолка является потолок типа «Armstrong». Лёгкость и универсальность его конструкции, классический дизайн, прекрасно вписывающийся в любой интерьер.
+                    +e.more.btn.btn_empty(href="#", data-popup ,data-src="#call") Сделать заказ
+              .swiper-slide
+                +e.img(src="img/banner2.jpg")
+                .container
+                  +e.block._larger
+                    +e('p').title Текст подлиннее, возможно даже в 3&nbsp;строки
+                    +e('p').text Одним из самых распространённых видов подвесного потолка является потолок типа «Armstrong». Лёгкость и универсальность его конструкции, классический дизайн, прекрасно вписывающийся в любой интерьер.
+                    +e.more.btn.btn_empty(href="#", data-popup ,data-src="#call") Сделать заказ
+            .swiper-pagination
+
+    include layout/__footer
+    include layout/__popup
+    include layout/__scripts
