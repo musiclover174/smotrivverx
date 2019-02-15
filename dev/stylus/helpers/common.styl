@@ -22,6 +22,16 @@ body
 .main
   oh()
   pos relative
+  z-index 1
+  &__decoration
+    pos absolute
+    z-index -1
+    l 0
+    t 0
+    size 100%
+    background url('../i/content__decor.png') repeat-y center top 400px
+    @media $desktopMax
+      background none
   h1:not([class])
     color $dark
     fontify 48px 700 54px
@@ -379,6 +389,10 @@ div[class\^="table-scroller"]
       size 9px
       background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAQAAABKmM6bAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAg4PAS9/jaz6AAAAT0lEQVQI10XMwQ3AIAxDUc/wp6FhI9pRq4oVYJFwCCnKJXq2LDrmyqPShTESqUwu+Y8BrkiNyROwycWN0+I/rZabCeVsxmjxbA9MfAkb3wVlRjzpdPRHWgAAAABJRU5ErkJggg==') no-repeat center
   
+.top
+  pt 63px
+  mb 50px
+
 .fakecheckbox
   ib()
   pos relative
@@ -440,9 +454,6 @@ body.index .main
 
 body:not(.index) .main
   pt 180px
-  background url('../i/content__decor.png') repeat-y center top 400px
-  @media $desktopMax
-    background none
   @media $desktopMin
     pt 80px
   &:before

@@ -8,6 +8,7 @@ import Index from './modules/index';
 import Popup from './modules/popup';
 import Forms from './modules/forms';
 import Burger from './modules/burger';
+import Contacts from './modules/contacts';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = new Burger();
@@ -33,6 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (qs('[data-popup]')) {
     window.popup = new Popup('[data-popup]');
+  }
+
+  if (qs('.js-map')) {
+    const cont = new Contacts('map');
   }
 
   resizeWatcher();

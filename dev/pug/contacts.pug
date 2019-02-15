@@ -1,0 +1,68 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+
+    +b('main').main
+      +b('section').top
+        .container
+          +b('section').breadcrumbs
+            +e.href(href="#") Главная
+            +e('span').delim / 
+          h1 Контакты
+
+      +b('section').contacts
+        .container
+          +e.wrapper
+            +e('aside').info
+              +e.info-row
+                +e('p').title Адрес
+                +e('p').value Челябинск, ул. Блюхера, 21, оф. 210
+              +e.info-row
+                +e('p').title Телефон
+                +e.value(href="tel:+73512606843") +7 (351) 260-68-43
+              +e.info-row
+                +e('p').title E-mail
+                +e.value(href="mailto:absolut-torg@list.ru") absolut-torg@list.ru
+            +e.map-wrapper
+              script(src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full")
+              +e.map#map.js-map
+
+      +b('section').feedback
+        .container.container_rel.sharp_grey
+          +e.inner
+            +e.top
+              p.common__title Обратная связь
+              p.common__subtitle Заполните поля ниже и наши менеджеры свяжутся с Вами в самое ближайшее время.
+            +e('form').form
+              +e.form-top
+                .common__col
+                  .common__row
+                    input.common__input(type="text", data-req="req")
+                    label.common__placeholder Ваше имя
+                      span *
+                  .common__row
+                    input.common__input.js-phone(type="text", data-req="req", data-type="phone")
+                    label.common__placeholder Телефон
+                      span *
+                  .common__row
+                    input.common__input(type="text")
+                    label.common__placeholder Электронная почта
+                .common__col
+                  .common__row
+                    textarea.common__textarea
+                    label.common__placeholder Текст сообщения
+              +e.form-bottom
+                .fakecheckbox
+                  input(type="checkbox", value="", name="agreement", checked)#agreement.fakecheckbox__truecheck
+                  label(for="agreement").fakecheckbox__label 
+                    a(href="#") Согласен на обработку персональных данных
+                button.common__submit.btn.btn_empty(type="submit") Отправить
+
+    include layout/__footer
+    include layout/__popup
+    include layout/__scripts

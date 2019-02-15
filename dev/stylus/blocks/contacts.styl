@@ -1,0 +1,52 @@
+.contacts
+  &__wrapper
+    df(stretch, space-between)
+    min-height 500px
+    border-left 1px solid lightgrey
+    pl 93px
+    @media $desktopMax
+      pl 78px
+      min-height 400px
+    @media $desktopMin
+      pl 50px
+    @media $LandscapeMin
+      flex-direction column
+      align-items flex-start
+      justify-content flex-start
+      border-left 0
+      pl 0
+  &__info
+    w 34%
+    pt 46px
+    @media $LandscapeMin
+      w 100%
+      pt 0
+    &-row
+      & + &
+        mt 30px
+  &__title
+    c $dark
+    fontify 18px 400 28px
+    mb 8px
+    @media $desktopMax
+      fontify 16px 400 26px
+  &__value
+    c $dark
+    fontify 26px 700 26px
+    @media $desktopMax
+      fontify 20px 700 26px
+    &[href^="mailto"]
+      border-bottom 1px solid $blue
+      transition .7s border-color
+      &:hover
+        border-color transparent
+  &__map
+    size 100%
+    &-wrapper
+      w 61%
+      @media $LandscapeMin
+        w 100%
+        h 70vh
+        mt 70px
+        max-height 400px
+  
