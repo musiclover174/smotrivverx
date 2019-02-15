@@ -1,0 +1,63 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      +e('span').decoration
+      .container
+        +b('section').text
+          +e.content
+            +b('section').breadcrumbs
+              +e.href(href="#") Главная
+              +e('span').delim / 
+              +e.href(href="#") Проекты
+              +e('span').delim / 
+            h1 Установка потолка Armsstrong Rongcheng №1 в экспериментальной начальной школе в Челябинске
+            p.projects__elem-date 19 января 2018
+            p Подвесной потолок состоит из металлокаркаса с антикоррозийным покрытием, на который устанавливаются квадратные либо прямоугольные плиты или узкие длинные рейки. Декоративные панели изготавливаются из минерального волокна, оргстекла или металла. Они бывают гладкими и рельефными, окрашиваются в любые оттенки палитры RAL, крепятся на каркас или укладываются в ячейки. К отдельной категории относятся потолки «Грильято». Объемные панели-соты и встроенные светильники создают оригинальную игру света и тени.
+            
+            section.projects__elem-carover
+              section.projects__elem-car.swiper-container.js-project-car
+                .swiper-wrapper
+                  .swiper-slide(style="background-image: url('img/pcar1.jpg')")
+                    a(href="img/pcar1.jpg").glightbox
+                  .swiper-slide(style="background-image: url('img/about-big.jpg')")
+                    a(href="img/about-big.jpg").glightbox
+                  .swiper-slide(style="background-image: url('img/pcar1.jpg')")
+                    a(href="img/pcar1.jpg").glightbox
+                  .swiper-slide(style="background-image: url('img/about-big.jpg')")
+                    a(href="img/about-big.jpg").glightbox
+                  .swiper-slide(style="background-image: url('img/pcar1.jpg')")
+                    a(href="img/pcar1.jpg").glightbox
+                  .swiper-slide(style="background-image: url('img/about-big.jpg')")
+                    a(href="img/about-big.jpg").glightbox
+                  .swiper-slide(style="background-image: url('img/pcar1.jpg')")
+                    a(href="img/pcar1.jpg").glightbox
+              section.projects__elem-thumbs-wrapper
+                section.projects__elem-thumbs.swiper-container.js-project-thumbs
+                  .swiper-wrapper
+                    .swiper-slide(style="background-image: url('img/tcar1.jpg')")
+                    .swiper-slide(style="background-image: url('img/tcar2.jpg')")
+                    .swiper-slide(style="background-image: url('img/tcar3.jpg')")
+                    .swiper-slide(style="background-image: url('img/tcar4.jpg')")
+                    .swiper-slide(style="background-image: url('img/tcar5.jpg')")
+                    .swiper-slide(style="background-image: url('img/tcar3.jpg')")
+                    .swiper-slide(style="background-image: url('img/tcar4.jpg')")
+                .swiper-buttons
+                  button(type="button").swiper-button-prev.js-project-prev
+                  button(type="button").swiper-button-next.js-project-next
+
+            p Интерьер бара, кафе, ресторана важен не меньше, чем оригинальное меню и качественный сервис. В интерьере ресторана нет мелочей: каждая поверхность должна сочетать стиль и практичность. Подвесной декоративный потолок дает такой результат. Выбрать подходящий потолок несложно – в продаже есть варианты под любой дизайн интерьера, есть материалы с водостойкими, акустическими и другими свойствами.
+            p Подвесной потолок состоит из металлокаркаса с антикоррозийным покрытием, на который устанавливаются квадратные либо прямоугольные плиты или узкие длинные рейки. Декоративные панели изготавливаются из минерального волокна, оргстекла или металла. Они бывают гладкими и рельефными, окрашиваются в любые оттенки палитры RAL, крепятся на каркас или укладываются в ячейки. К отдельной категории относятся потолки «Грильято». Объемные панели-соты и встроенные светильники создают оригинальную игру света и тени.
+            p Разнообразие потолков открывает простор для воплощения дизайнерских мыслей. Можно создавать идеально ровные поверхности любой фактуры и цвета или многоуровневые дизайнерские потолки со сложным рельефом. 
+
+            a(href="#").common__back Вернуться к списку проектов
+            
+    include layout/__footer
+    include layout/__popup
+    include layout/__scripts

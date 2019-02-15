@@ -9,6 +9,7 @@ import Popup from './modules/popup';
 import Forms from './modules/forms';
 import Burger from './modules/burger';
 import Contacts from './modules/contacts';
+import Projects from './modules/projects';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = new Burger();
@@ -38,6 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (qs('.js-map')) {
     const cont = new Contacts('map');
+  }
+
+  if (qs('.js-project-car')) {
+    const projects = new Projects('.js-project-car', '.js-project-thumbs');
+  }
+
+  if (qs('.glightbox')) {
+    const lightBox = GLightbox({
+      selector: 'glightbox',
+    });
   }
 
   resizeWatcher();

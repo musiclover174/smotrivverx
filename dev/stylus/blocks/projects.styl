@@ -1,9 +1,11 @@
-.projects
+body.index .projects
   mt 177px
   @media $lDesktopMax
     mt 157px
   @media $LandscapeMax
     mt 95px
+
+.projects
   &__top
     @media $PortraitMaxFrom
       df(center, flex-start)
@@ -41,11 +43,17 @@
       @media $PortraitMedium
         pr 35px
       .swiper-slide
-        &-active ^[0]__item-img
+        &-active ^[0]__item-side
           opacity 1
         &-active ^[0]__item-content
           opacity 1
           visibility visible
+        & ^[0]__item-date
+          @media $PortraitMedium
+            c alpha(white, .5)
+        & ^[0]__item-title
+          @media $PortraitMedium
+            c white
       .swiper-buttons
         size 0
         pos absolute
@@ -74,6 +82,8 @@
       pos relative
       min-height 100%
       oh()
+      opacity .2
+      transition .7s opacity
       @media $lDesktopMax
         w calc(50% + 70px)
       @media $LandscapeMax
@@ -83,17 +93,28 @@
         pos absolute
         size 100%
         mr 0
+    &-imgover
+      db()
+      pos relative
+      w 100%
+      pt 49%
+      oh()
+      mb 20px
+      &:hover > ^[-1]-img
+        transform scale(1)
     &-img
       pos absolute
       l 0
       t 0
       r 0
       b 0
-      opacity .2
       background-size cover
       background-repeat no-repeat
       background-position top center
-      transition .7s opacity
+      &:not([href])
+        transform scale(1.02)
+        transition 2s transform
+        will-change transform
     &-content
       padding 30px 0
       w calc(50% - 138px)
@@ -119,18 +140,113 @@
       mb 11px
       @media $lDesktopMax
         fontify 14px 400 26px
-      @media $PortraitMedium
-        c alpha(white, .5)
+      @media $LandscapeMin
+        mb 4px
     &-title
       c $dark
       fontify 26px 700 38px
       border-bottom 1px solid $blue
-      transition .7s border
+      transition .7s border, .7s color
       @media $lDesktopMax
         fontify 22px 700 32px
       @media $LandscapeMax
         fontify 18px 700 26px
-      @media $PortraitMedium
-        c white
+      @media $PortraitMediumFrom
+        &:hover
+          c $blue
       &:hover
         border-color transparent
+  &__list
+    df()
+    flex-wrap wrap
+    ml -44px
+    w calc(100% + 44px)
+    @media $desktopMax
+      ml -30px
+      w calc(100% + 30px)
+    @media $LandscapeMin
+      flex-direction column
+    &-item
+      ml 44px
+      w calc(50% - 44px)
+      mb 70px
+      @media $desktopMax
+        ml 30px
+        w calc(50% - 30px)
+        mb 60px
+      @media $LandscapeMin
+        w calc(100% - 30px)
+  &__elem
+    &-date
+      ib()
+      margin 5px 0 3px
+      pos relative
+      c alpha($dark, .5)
+      fontify 16px 400 18px
+      @media $desktopMax
+        fontify 14px 400 16px
+    &-carover
+      pos relative
+      margin 33px 0
+      .swiper-slide
+        background-size cover
+        background-position center
+        background-repeat no-repeat
+    &-car
+      .swiper-slide
+        h 630px
+        @media $desktopMax
+          h 500px
+        @media $PortraitMax
+          h 300px
+        .glightbox
+          db()
+          h 100%
+    &-thumbs
+      &-wrapper
+        pos relative
+        padding 0 50px
+        mt 18px
+        @media $PortraitMax
+          padding 0 30px
+          mt 14px
+        .swiper-buttons
+          pos absolute
+          t calc(50% - 8px)
+          h 0
+          l 0
+          w 100%
+          max-width 100%
+          z-index 1
+          justify-content space-between
+      .swiper-slide
+        cursor pointer
+        pt 11%
+        @media $desktopMax
+          pt 15%
+        &:before
+          content ""
+          pos absolute
+          t 0
+          l 0
+          background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAQAAAACNCElAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAg8KIg2qMz/xAAACiUlEQVRIx6XWQUtcVxgG4FdjZoQm1dBFi6ABXTSQZVqkUAjdpVmVYBb6A6oQ6ELTlmTZP+Kif8C4yLjrshCNQbtqIW2krTDWFE2hYCg+XTg6Orlzx5mcs7lz5+Nh7pnzfuf2yZlRzWf5Ip/kaoayn638mKX8kIOcb2jOAV/a9uaom1eRzrN5+aEN8MyCSSMqRkya9wxsuHZ+7GMv8dwdfS0lfe54jr9Nng+7Zg8rhtuUDVvBXqdfF3HRBh65IKLftGU72LFsWr+ICx5h08VO2H384pKIcWsty79mXMQlP+N+OTaojs8bVB1b5oypGDNnC/UGdwt1g2XYFNYbD7iKFZdPFVy2gtXGw67jbhm2iAURM/jVUEvJkN8wI2IBi2XYJo0/vYbZgqI51ER8hJ/KsD2MiPgLowVFY9gWcQV77bE+klTzOknz6uyo5CCvU22kL+lrF83+vEryXpJkN8n7BTUfJHmZJLmS5FX7nPfn9yRjSZK1JLcLam4n2UiSjCf5owxbTfJpkuT7JN/knZaKd/Nt47vkZpInZS3oLp6e2me1ln1WO7XP1jrts6ME3BIxoY4XZo2qGDXrBeomThKwU56As9mcKMjmxKlsft1L1/jTgW3LZrrtGsf9rPZGlJqRquFf33XuZ0dBqXfotLv+c+ieigeq5ViMedo4A+bdMCyG3Tg5A9Zddc+hQxt4XMyd/jBgrvB02jZrQMRXJ/cKudYbg6Ys2rSPfZsWTZ1shool/GPGTjFXuqAt8wGYFteLuW6wqsfYcb0d1w3WkesOK+JqTa5brJTrHivhesHacr1hbbhesbPcNHjYO9bkpu1iSeVtsGPOEdX7mp3llo5eU98Wi6qHx2+8/wM5ZwmhpdjW7wAAAABJRU5ErkJggg==') no-repeat center $blue
+          size 100%
+          opacity 0
+          transition .7s opacity
+        &:hover:before
+          opacity .89
+        @media $LandscapeMin
+          pt 18%
+        @media $PortraitMedium
+          pt 28%
+        &:after
+          content ""
+          pos absolute
+          l 0
+          r 0
+          b 0
+          t 0
+          border 2px solid transparent
+          transition .7s after
+        &-thumb-active:after
+          border-color $blue

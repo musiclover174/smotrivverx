@@ -1,0 +1,80 @@
+.pagination
+  display flex
+  justify-content center
+  align-items flex-start
+  mt 40px
+  @media $LandscapeMin
+    mt 20px
+  &__prev,
+  &__next
+    ib()
+    pos relative
+    size 48px
+    outline none
+    transition .7s opacity
+    @media $PortraitMax
+      size 35px
+    &:before
+      content ""
+      pos absolute
+      l 50%
+      t 50%
+      size 20px 16px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAQAAAC8EZeQAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAg8JEjexP27pAAAArklEQVQoz43RMU4CURCA4W9fS4OroB4BjSHiCZBXmMhVLa14uidAJUQ9ghhEK0JrKSG7T/5ppviayRSlrdrubIxZ2S1s7QeSa6dq+4Ol5Mq72zw8lAy8GVrk4JHk0quhTw0VJR0TfXMjS40FHQ/6ZnlGUU4NrLXkS8F+heDGXMtMV5GZUcMx9Z9Zil5cqHRzV8OX6Nm5ynEeshI9OVM5yUO+RVM99/9BfkSPPurhL0ehKlsIt2aIAAAAAElFTkSuQmCC') no-repeat center
+      transition .7s background
+      mt -7px
+      ml -8px
+    &:not(.disabled):hover
+      &:before
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAMAAAAhxq8pAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAATlBMVEUAUJ3///8AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ0AUJ3///+FiTmlAAAAGHRSTlMAABC9tBHMzRLWGBPO1RcUz9QWFdDS9Lu/YBL8AAAAAWJLR0QB/wIt3gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+MCDwkSEWMy6xQAAABZSURBVBjTbdDJDoAwCARQtGrdN1qd//9Sjb0ImTmRlxAWkS91aEoh1ZtStR2ixz5iGB1OM5ZVLG47jlMsakJWsagZ6WcFIy643AwDb6eD+Ep8eX4mf4h/3QP8VQd7ckKB3gAAAABJRU5ErkJggg==') no-repeat center
+    &.disabled
+      opacity .1
+      border-bottom transparent
+  &__prev
+    mr 19px
+    @media $PortraitMax
+      mr 15px
+  &__next
+    transform scaleX(-1)
+    ml 19px
+    @media $PortraitMax
+      ml 15px
+  &__list
+    display flex
+  &__item
+    text-align center
+    color $dark
+    size 48px
+    display flex
+    align-items center
+    justify-content center
+    border-radius 50%
+    border 2px solid transparent
+    fontify 18px 600 48px
+    @media $desktopMax
+      fontify 16px 600 40px
+    @media $PortraitMax
+      size 35px
+      line-height 35px
+    @media $LandscapeMinFrom
+      & + &
+        ml 10px
+    &.active
+      border-color $blue
+    &-href
+      pos relative
+      color $dark
+      fontify 18px 600 20px
+      transition .7s border
+      border-bottom 1px solid $blue
+      transition .7s color, .7s border
+      @media $desktopMax
+        fontify 16px 600 18px
+      &:not(a):after
+        border-color transparent
+      &:hover
+        color $blue
+        border-color transparent
+      ^[-1].active &
+        color $blue
+        border-color transparent

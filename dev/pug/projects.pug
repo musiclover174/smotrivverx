@@ -1,0 +1,76 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+
+    +b('main').main
+      +b('section').top
+        .container
+          +b('section').breadcrumbs
+            +e.href(href="#") Главная
+            +e('span').delim / 
+          h1 Проекты
+
+      +b('section').projects
+        .container
+          +e('ul').list
+            +e.list-item.h-anim
+              +e.item-imgover(href="#")
+                +e.item-img(style="background-image: url('img/proj-list1.jpg')")
+              +e.item-date 21 января 2018
+              +e.item-title(href="#") Название проекта в несколько строчек, чтобы показать межстрочное расстояние
+            +e.list-item.h-anim
+              +e.item-imgover(href="#")
+                +e.item-img(style="background-image: url('img/proj-list2.jpg')")
+              +e.item-date 19 января 2018
+              +e.item-title(href="#") Название проекта в несколько строчек, чтобы показать межстрочное расстояние, а может даже еще длиннее, чтобы показать длинные названия
+            +e.list-item.h-anim
+              +e.item-imgover(href="#")
+                +e.item-img(style="background-image: url('img/proj-list3.jpg')")
+              +e.item-date 10 декабря 2017
+              +e.item-title(href="#") Короткое название
+            +e.list-item.h-anim
+              +e.item-imgover(href="#")
+                +e.item-img(style="background-image: url('img/proj-list4.jpg')")
+              +e.item-date 21 января 2018
+              +e.item-title(href="#") Название проекта в несколько строчек, чтобы показать межстрочное расстояние
+            +e.list-item.h-anim
+              +e.item-imgover(href="#")
+                +e.item-img(style="background-image: url('img/proj-list1.jpg')")
+              +e.item-date 21 января 2018
+              +e.item-title(href="#") Название проекта в несколько строчек, чтобы показать межстрочное расстояние
+            +e.list-item.h-anim
+              +e.item-imgover(href="#")
+                +e.item-img(style="background-image: url('img/proj-list2.jpg')")
+              +e.item-date 21 января 2018
+              +e.item-title(href="#") Название проекта в несколько строчек, чтобы показать межстрочное расстояние
+            +e.list-item.h-anim
+              +e.item-imgover(href="#")
+                +e.item-img(style="background-image: url('img/proj-list3.jpg')")
+              +e.item-date 21 января 2018
+              +e.item-title(href="#") Название проекта в несколько строчек, чтобы показать межстрочное расстояние
+            +e.list-item.h-anim
+              +e.item-imgover(href="#")
+                +e.item-img(style="background-image: url('img/proj-list4.jpg')")
+              +e.item-date 21 января 2018
+              +e.item-title(href="#") Название проекта в несколько строчек, чтобы показать межстрочное расстояние
+            +e.list-item.h-anim
+              +e.item-imgover(href="#")
+                +e.item-img(style="background-image: url('img/proj-list1.jpg')")
+              +e.item-date 21 января 2018
+              +e.item-title(href="#") Название проекта в несколько строчек, чтобы показать межстрочное расстояние
+            +e.list-item.h-anim
+              +e.item-imgover(href="#")
+                +e.item-img(style="background-image: url('img/proj-list2.jpg')")
+              +e.item-date 21 января 2018
+              +e.item-title(href="#") Название проекта в несколько строчек, чтобы показать межстрочное расстояние
+          
+          include layout/__pagination
+
+    include layout/__footer
+    include layout/__popup
+    include layout/__scripts
