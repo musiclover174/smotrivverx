@@ -1,6 +1,10 @@
+import { qs } from './helpers';
+
 export default class Contacts {
   constructor(mapEl) {
     this.mapEl = mapEl;
+    this.iconUrl = qs(`#${mapEl}`).getAttribute('data-pin');
+    this.coords = qs(`#${mapEl}`).getAttribute('data-coords').split(', ');
     this.init();
   }
 
@@ -10,17 +14,17 @@ export default class Contacts {
 
     DG.then(() => {
       map = DG.map(this.mapEl, {
-        center: [55.1394, 61.37938],
+        center: this.coords,
         zoom: 16,
         fullscreenControl: false,
       });
 
       myIcon = DG.icon({
-        iconUrl: '/static/i/pin.png',
+        iconUrl: this.iconUrl,
         iconSize: [44, 56],
       });
 
-      DG.marker([55.1394, 61.37938], {
+      DG.marker(this.coords, {
         icon: myIcon,
       }).addTo(map);
     });
