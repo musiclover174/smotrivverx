@@ -1,0 +1,62 @@
+.calc
+  &__title
+    c $dark
+    fontify 22px 400 28px
+    mb 55px
+  &__list
+    df(flex-start, space-between)
+    bgc white
+    padding 60px 78px
+    @media $desktopMax
+      padding 50px 60px
+    @media $desktopMin
+      padding 50px
+    @media $LandscapeMin
+      flex-direction column
+      justify-content flex-start
+      align-items center
+    @media $PortraitMedium
+      padding 30px
+  &__item
+    w calc(100% / 3 - 40px)
+    max-width 410px
+    text-align center
+    @media $desktopMin
+      w calc(100% / 3 - 20px)
+    @media $LandscapeMin
+      w 100%
+      & + &
+        mt 60px
+    &-imgover
+      db()
+      oh()
+      pos relative
+      pt 100%
+      mb 30px
+      &:hover ^[-1]-img
+        transform scale(1)
+      &:hover + ^[-1]-name
+        border-color transparent
+        c $blue
+    &-img 
+      pos absolute
+      t 0
+      l 0
+      size 100%
+      object-fit cover
+      font-family 'object-fit: cover;'
+      transform scale(1.02)
+      transition 2s transform
+      will-change transform
+    &-name
+      c $dark
+      fontify 26px 700 34px
+      border-bottom 1px solid $blue
+      transition .7s border, .7s color
+      @media $desktopMax
+        fontify 22px 700 32px
+      @media $LandscapeMax
+        fontify 20px 700 30px
+      &:hover
+        border-color transparent
+        c $blue

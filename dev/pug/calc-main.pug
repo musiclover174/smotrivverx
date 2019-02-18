@@ -1,0 +1,37 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+
+    +b('main').main._sharp
+      +b('section').top
+        .container
+          +b('section').breadcrumbs
+            +e.href(href="#") Главная
+            +e('span').delim / 
+          h1 Калькулятор потолка
+
+      +b('section').calc
+        .container
+          +e.title Выберите тип потолка:
+          +e('ul').list
+            +e.item
+              +e.item-imgover(href="#")
+                +e.item-img(src="img/calc1.jpg")
+              +e.item-name(href="#") Потолок типа Armstrong 
+            +e.item
+              +e.item-imgover(href="#")
+                +e.item-img(src="img/calc2.jpg")
+              +e.item-name(href="#") Потолок типа Грильято
+            +e.item
+              +e.item-imgover(href="#")
+                +e.item-img(src="img/calc3.jpg")
+              +e.item-name(href="#") Потолок типа Реечный
+          
+    include layout/__footer
+    include layout/__popup
+    include layout/__scripts
