@@ -2,43 +2,23 @@ import { qs, qsAll } from './helpers';
 
 export default class Index {
   constructor({
-    bannerClass,
     categoriesClass,
     popularClass,
     galleryClass,
     developersClass,
     projectsClass,
   }) {
-    this.bannerClass = bannerClass;
     this.categoriesClass = categoriesClass;
     this.popularClass = popularClass;
     this.galleryClass = galleryClass;
     this.developersClass = developersClass;
     this.projectsClass = projectsClass;
 
-    if (qs(bannerClass)) this.bannerInit();
     if (qs(categoriesClass)) this.catsInit();
     if (qs(popularClass)) this.popularInit();
     if (qs(galleryClass)) this.galleryInit();
     if (qs(developersClass)) this.developersInit();
     if (qs(projectsClass)) this.projectsInit();
-  }
-
-  bannerInit() {
-    const bannerCarousel = new Swiper(this.bannerClass, {
-      speed: 1500,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      pagination: {
-        el: `${this.bannerClass} .swiper-pagination`,
-        type: 'bullets',
-        clickable: true,
-      },
-      autoplay: {
-        delay: 8000,
-      },
-    });
   }
 
   catsInit() {

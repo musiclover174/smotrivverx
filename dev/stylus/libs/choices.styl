@@ -3,8 +3,10 @@
 ===============================*/
 .choices {
   position: relative;
-  font-size: 16px;
-  line-height: 24px;
+  fontify 18px 700 28px;
+  @media $desktopMax {
+    font-size: 16px;
+  }
 }
 
 .choices:focus {
@@ -67,12 +69,12 @@
 
 .choices[data-type*="select-one"]:after {
   content: "";
-  size 16px 10px
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKBAMAAABPkMOvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///+QQS04AAAACHRSTlMAKQM48Kk3NvV16uIAAAABYktHRAnx2aXsAAAACXBIWXMAAAsSAAALEgHS3X78AAAARUlEQVQI12NgVGAAAiYBBpMgEEPVjSGlFSjEFOHOwOYBFFJtKWAACYEEGEBCqi0JIIUprRFuIJqB3QMiwMBQAhEACoEEABl3C7YMtMY5AAAAAElFTkSuQmCC") no-repeat center;
+  size 10px 6px
+  background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGBAMAAAAI3hL1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEUAUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ7///89t3OTAAAAC3RSTlMAxscTzc/OFdPUFijyHU4AAAABYktHRAyBs1FjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wISCCIFBR/s7wAAAC1JREFUCNdjEDJgYFZk8A5mMNvCULHVOHs6A/vstJ0FDAyVu6czMDCwuyxgAACaLgk4XJZVaAAAAABJRU5ErkJggg==') no-repeat center
   position: absolute;
-  right: 11.5px;
+  right: 19px;
   top: 50%;
-  margin-top: -5px;
+  margin-top: -4px;
   pointer-events: none;
   transition .5s transform
   will-change transform
@@ -123,14 +125,13 @@
   vertical-align: top;
   width: 100%;
   bgc #fff
-  font-size: 16px;
-  h 40px
-  border 1px solid #e3e3e3
+  h 52px
+  border 2px solid #e0e0e0
   overflow: hidden;
   transition .7s border-color
 }
 
-.is-focused .choices__inner, .is-open .choices__inner {
+.is-open .choices__inner {
   border-color: $blue;
 }
 
@@ -142,9 +143,9 @@
 
 .choices__list--single {
   display: inline-block;
-  padding: 0 34px 0 17px;
+  padding: 0 40px 0 19px;
   width: 100%;
-  line-height: 38px;
+  line-height: 45px;
 }
 
 [dir="rtl"] .choices__list--single {
@@ -239,11 +240,13 @@
 .choices__list--dropdown .choices__item {
   position: relative;
   padding: 0 18px;
-  font-size: 16px;
-  line-height: 31px;
+  fontify 18px 400 36px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow:hidden;
+  @media $desktopMax {
+    font-size: 16px;
+  }
 }
 
 [dir="rtl"] .choices__list--dropdown .choices__item {
@@ -276,7 +279,7 @@
 }*/
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
-  background-color: $red;
+  background-color: $blue;
   color: white;
 }
 

@@ -1,0 +1,100 @@
+.filter
+  bgc white
+  padding 55px 60px
+  @media $desktopMax
+    padding 35px 37px
+  &:not(:first-child)
+    mt 30px
+  &__title
+    c $dark
+    fontify 22px 700 26px
+    pb 26px
+    mb 23px
+    border-bottom 1px solid #e0e0e0
+    @media $desktopMax
+      fontify 20px 700 26px
+  &__row
+    & + &
+      mt 18px
+      @media $desktopMax
+        mt 15px
+  &__label
+    db()
+    c alpha($dark, .5)
+    fontify 18px 400 26px
+    mb 15px
+    @media $desktopMax
+      fontify 16px 400 26px
+  &__range
+    &-wrapper
+      pos relative
+      mt 30px
+    &-input
+      pos absolute
+      l -100vw
+      t -100vh
+    &-fromto
+      df(flex-start, space-between)
+      mt 13px
+    &-from,
+    &-to
+      c $dark
+      fontify 18px 700 26px
+      @media $desktopMax
+        fontify 16px 700 26px
+      &:before
+        c $blue
+    &-from:before
+      content "от: "
+    &-to:before
+      content "до: "
+  &__reset
+    mt 10px
+    &:after
+      ml 6px
+      size 12px 12px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMBAMAAACkW0HUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEUAUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ7////Sla2RAAAACHRSTlMADRQMw9QVFqaeEawAAAABYktHRAnx2aXsAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wISCA875FSrqwAAADtJREFUCNdjYFRgYGAyYDAJY2BIdWZIbU1giwhjYI8IS20tAIq0RoQzMDCwRYA4MAoiCFUC1QDVDjEMAMY2EP29XPrAAAAAAElFTkSuQmCC') no-repeat center
+  
+.sort
+  c $dark
+  fontify 18px 400 28px
+  mb 80px
+  mt -8px
+  @media $desktopMax
+    fontify 16px 400 26px
+  &__title
+    ib()
+    mr 26px
+    @media $PortraitMedium
+      db()
+      mr 0
+      mb 6px
+  &__elem
+    pos relative
+    ib()
+    mt 4px
+    c $dark
+    fontify 18px 700 20px
+    border-bottom 1px dotted $blue
+    transition .7s border-color
+    @media $desktopMax
+      fontify 16px 700 20px
+      mt 3px
+    &.asc,
+    &.desc
+      mr 14px
+      &:after
+        content ""
+        pos absolute
+        t 8px
+        r -20px
+        size 10px 6px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGBAMAAAAI3hL1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEUAUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ7///89t3OTAAAAC3RSTlMAxscTzc/OFdPUFijyHU4AAAABYktHRAyBs1FjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wISCBMMup5T+QAAAC1JREFUCNdjEDJgYFZk8A5mMNvCULHVOHs6A/vstJ0FDAyVu6czMDCwuyxgAACaLgk4XJZVaAAAAABJRU5ErkJggg==') no-repeat center
+        will-change transform
+        transition .7s transform
+    &.desc:after
+      transform scaleY(-1)
+    &:hover
+      border-color transparent
+    & + &
+      ml 30px

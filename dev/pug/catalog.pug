@@ -1,0 +1,168 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+
+    +b('main').main._sharp
+      +b('section').top
+        .container
+          +b('section').breadcrumbs
+            +e.href(href="#") Главная
+            +e('span').delim / 
+          h1 Каталог
+
+      +b('section').catalog
+        .container
+          +e.wrapper
+            +e('aside').sidebar
+              +e('section').categories
+                +e.group
+                  +e.group-mainhref(href="#") Потолок
+                  +e.group-opener.open.js-cat-opener(type="button")
+                  +e.group-hide
+                    +e.group-sub
+                      +e.group-subhref._active(href="#") Armstrong
+                    +e.group-sub
+                      +e.group-subhref(href="#") Металлический
+                    +e.group-sub
+                      +e.group-subhref(href="#") Грильято
+                    +e.group-sub
+                      +e.group-subhref(href="#") Реечный
+                    +e.group-sub
+                      +e.group-subhref(href="#") Дизайнерский
+                +e.group
+                  +e.group-mainhref(href="#") Потолок
+                  +e.group-opener.js-cat-opener(type="button")
+                  +e.group-hide
+                    +e.group-sub
+                      +e.group-subhref(href="#") Реечный
+                    +e.group-sub
+                      +e.group-subhref(href="#") Дизайнерский
+                +e.group
+                  +e.group-mainhref(href="#") Светильники
+                  +e.group-opener.js-cat-opener(type="button")
+                  +e.group-hide
+                    +e.group-sub
+                      +e.group-subhref(href="#") Armstrong
+                    +e.group-sub
+                      +e.group-subhref(href="#") Металлический
+              +b('section').filter
+                +e('p').title Фильтр
+                +e.row
+                  +e('label').label Комплектация, руб.
+                  +e.range-wrapper
+                    +e('input').range-input(value="199:2484")
+                    +e.range-elem.js-range(data-from="199", data-to="2484", data-min="0", data-max="5000")
+                    +e.range-fromto
+                      +e('span').range-from.js-range-from
+                      +e('span').range-to.js-range-to
+                +e.row
+                  +e('label').label Бренд
+                  +e('select').select.js-cat-select
+                    option(value="0", selected) Все
+                    option(value="1") Бренд 1
+                    option(value="2") Бренд 2
+                    option(value="3") Бренд 3
+                +e.row
+                  +e.reset.btn.btn_empty.js-cat-reset(type="button") Сбросить
+            +e.content
+              +b('section').sort 
+                +e('span').title Сортировать:
+                +e.elem.js-cat-sort(type="button") По цене
+                +e.elem.js-cat-sort(type="button") По популярности
+              +e('ul').list
+                +e.item
+                  +e.item-imgover
+                    +e.item-img(src="img/popular1.jpg")
+                  +e('p').item-cost 292 р.
+                  +e.item-hrefover
+                    +e.item-href(href="#") Подвесной потолок Armstrong Oasis Board, 600*600*12 мм
+                  +e.item-bottom
+                    +e.item-btn.btn._empty(type="button") Заказать
+                +e.item
+                  +e.item-imgover
+                    +e.item-img(src="img/popular2.jpg")
+                  +e('p').item-cost 343 р.
+                  +e.item-hrefover
+                    +e.item-href(href="#") Плита Armstrong Scala BP2621M3A, 600*600*12 мм
+                  +e.item-bottom
+                    +e.item-btn.btn._empty(type="button") Заказать
+                +e.item
+                  +e.item-imgover
+                    +e.item-img(src="img/popular1.jpg")
+                  +e('p').item-cost 456 р.
+                  +e.item-hrefover
+                    +e.item-href(href="#") Плита Armstrong Байкал BP98432М3, 600*600*12 мм
+                  +e.item-bottom
+                    +e.item-btn.btn._empty(type="button") Заказать
+                +e.item
+                  +e.item-imgover
+                    +e.item-img(src="img/popular2.jpg")
+                  +e('p').item-cost 343 р.
+                  +e.item-hrefover
+                    +e.item-href(href="#") Плита Armstrong Scala BP2621M3A, 600*600*12 мм
+                  +e.item-bottom
+                    +e.item-btn.btn._empty(type="button") Заказать
+                +e.item
+                  +e.item-imgover
+                    +e.item-img(src="img/popular1.jpg")
+                  +e('p').item-cost 292 р.
+                  +e.item-hrefover
+                    +e.item-href(href="#") Подвесной потолок Armstrong Oasis Board, 600*600*12 мм
+                  +e.item-bottom
+                    +e.item-btn.btn._empty(type="button") Заказать
+                +e.item
+                  +e.item-imgover
+                    +e.item-img(src="img/popular2.jpg")
+                  +e('p').item-cost 343 р.
+                  +e.item-hrefover
+                    +e.item-href(href="#") Плита Armstrong Scala BP2621M3A, 600*600*12 мм
+                  +e.item-bottom
+                    +e.item-btn.btn._empty(type="button") Заказать
+                +e.item
+                  +e.item-imgover
+                    +e.item-img(src="img/popular1.jpg")
+                  +e('p').item-cost 456 р.
+                  +e.item-hrefover
+                    +e.item-href(href="#") Плита Armstrong Байкал BP98432М3, 600*600*12 мм
+                  +e.item-bottom
+                    +e.item-btn.btn._empty(type="button") Заказать
+                +e.item
+                  +e.item-imgover
+                    +e.item-img(src="img/popular2.jpg")
+                  +e('p').item-cost 343 р.
+                  +e.item-hrefover
+                    +e.item-href(href="#") Плита Armstrong Scala BP2621M3A, 600*600*12 мм
+                  +e.item-bottom
+                    +e.item-btn.btn._empty(type="button") Заказать
+                +e.item
+                  +e.item-imgover
+                    +e.item-img(src="img/popular1.jpg")
+                  +e('p').item-cost 456 р.
+                  +e.item-hrefover
+                    +e.item-href(href="#") Плита Armstrong Байкал BP98432М3, 600*600*12 мм
+                  +e.item-bottom
+                    +e.item-btn.btn._empty(type="button") Заказать
+                +e.item
+                  +e.item-imgover
+                    +e.item-img(src="img/popular2.jpg")
+                  +e('p').item-cost 343 р.
+                  +e.item-hrefover
+                    +e.item-href(href="#") Плита Armstrong Scala BP2621M3A, 600*600*12 мм
+                  +e.item-bottom
+                    +e.item-btn.btn._empty(type="button") Заказать
+          
+          include layout/__pagination
+
+          +e('section').seo
+            h2 Seo-заголовок
+            p Подвесной потолок состоит из металлокаркаса с антикоррозийным покрытием, на который устанавливаются квадратные либо прямоугольные плиты или узкие длинные рейки. Декоративные панели изготавливаются из минерального волокна, оргстекла или металла. Они бывают гладкими и рельефными, окрашиваются в любые оттенки палитры RAL, крепятся на каркас или укладываются в ячейки. К отдельной категории относятся потолки «Грильято». Объемные панели-соты и встроенные светильники создают оригинальную игру света и тени.
+            p Разнообразие потолков открывает простор для воплощения дизайнерских мыслей. Можно создавать идеально ровные поверхности любой фактуры и цвета или многоуровневые дизайнерские потолки со сложным рельефом. 
+
+    include layout/__footer
+    include layout/__popup
+    include layout/__scripts

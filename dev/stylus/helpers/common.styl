@@ -32,6 +32,18 @@ body
     background url('../i/content__decor.png') repeat-y center top 400px
     @media $desktopMax
       background none
+  &_sharp
+    background-repeat repeat
+    background-position top left
+    background-image url('../i/sharp_g.png')
+    mb -150px
+    pb 150px
+    @media $lDesktopMax
+      mb -132px
+      pb 132px
+    @media $LandscapeMax
+      mb -95px
+      pb 95px
   h1:not([class])
     color $dark
     fontify 48px 700 54px

@@ -11,6 +11,8 @@ import Burger from './modules/burger';
 import Contacts from './modules/contacts';
 import Projects from './modules/projects';
 import Sticky from './modules/sticky';
+import Banner from './modules/banner';
+import Catalog from './modules/catalog';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = new Burger();
@@ -18,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.body.classList.contains('index')) {
     const index = new Index(
       {
-        bannerClass: '.js-banner',
         categoriesClass: '.js-cat',
         popularClass: '.js-popular-car',
         galleryClass: '.js-gallery-car',
@@ -26,6 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
         projectsClass: '.js-projects-car',
       },
     );
+  }
+
+  if (qs('.js-banner')) {
+    const banner = new Banner('.js-banner');
   }
 
   if (qsAll('.h-anim').length) elemVisCheck();
@@ -50,6 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightBox = GLightbox({
       selector: 'glightbox',
     });
+  }
+
+  if (qs('.catalog')) {
+    const catalog = new Catalog('.js-range', '.js-cat-sort', '.js-cat-opener', '.js-cat-select');
   }
 
   if (document.querySelector('.js-sticky')) {

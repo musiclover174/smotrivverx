@@ -1,0 +1,174 @@
+.catalog
+  &__wrapper
+    df(flex-start, space-between)
+    @media $LandscapeMedium
+      flex-direction column
+      justify-content flex-start
+  &__sidebar
+    w 411px
+    @media $desktopMax
+      w 324px
+    @media $LandscapeMedium
+      w 100%
+    &-wrapper
+      w 100%
+  &__categories
+    bgc white
+    padding 29px 60px
+    @media $desktopMax
+      padding 9px 37px
+  &__group
+    pos relative
+    padding 25px 0
+    @media $desktopMax
+      padding 24px 0
+    &-opener
+      pos absolute
+      r 0
+      t 35px
+      size 10px 6px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGBAMAAAAI3hL1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEUAUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ7///89t3OTAAAAC3RSTlMAxscTzc/OFdPUFijyHU4AAAABYktHRAyBs1FjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wISCAQSRRLqDAAAAC1JREFUCNdjEDJgYFZk8A5mMNvCULHVOHs6A/vstJ0FDAyVu6czMDCwuyxgAACaLgk4XJZVaAAAAABJRU5ErkJggg==') no-repeat center
+      will-change transform
+      transition .7s transform
+      &.open
+        transform scaleY(-1)
+        & + ^[-2]-hide
+          max-height 400px
+          mt 20px
+    &-hide
+      oh()
+      max-height 0
+      mt 0
+      transition .5s max-height, .7s margin-top
+    &-mainhref
+      c $dark
+      fontify 22px 700 26px
+      transition .7s color
+      @media $desktopMax
+        fontify 20px 700 26px
+      &:hover
+        c $blue
+    &-sub
+      &:last-child
+        pb 2px
+      & + &
+        mt 16px
+      &href
+        c $dark
+        fontify 18px 400 22px
+        border-bottom 1px solid $blue
+        transition .7s color, .7s border
+        @media $desktopMax
+          fontify 16px 400 22px
+        &:not(&_active):hover
+          border-color transparent
+          c $blue
+        &_active
+          font-weight 700
+          c $blue
+          border-bottom transparent
+    & + &
+      border-top 1px solid #e0e0e0
+  &__content
+    w calc(100% - 504px)
+    @media $desktopMax
+      w calc(100% - 400px)
+    @media $LandscapeMedium
+      w 100%
+      mt 80px
+  &__list
+    df()
+    flex-wrap wrap
+    w calc(100% + 88px)
+    ml -88px
+    mb -68px
+  &__item
+    w calc(50% - 138px)
+    pos relative
+    bgc white
+    padding 166px 49px 43px
+    text-align right
+    ml 138px
+    mb 142px
+    @media $lDesktopMax
+      padding 119px 40px 33px
+    @media $desktopMax
+      ml 138px
+      w calc(50% - 138px)
+    @media $desktopMin
+      w calc(100% - 138px)
+    @media $LandscapeMax
+      mb 60px
+    @media $PortraitMedium
+      padding 119px 30px 33px
+    @media $Mobile370
+      padding 119px 20px 23px
+      ml 118px
+      w calc(100% - 118px)
+    &-img
+      size 100%
+      @media $LandscapeMaxFrom
+        transform rotate3d(-1, 0, 0, 60deg)
+        transform-origin top left
+        transition 1s transform
+        will-change transform
+        ^[-1]:hover &
+          transform rotate3d(0, 0, 0, 0)
+      &over
+        @media $LandscapeMaxFrom
+          perspective 1000px
+        pos absolute
+        l -48px
+        t -28px
+        size 219px
+        @media $lDesktopMax
+          size 156px
+        @media $Mobile370
+          l -30px
+    &-cost
+      c $blue
+      fontify 24px 700 26px
+      @media $lDesktopMax
+        fontify 20px 700 22px
+    &-hrefover
+      margin 15px 0 0 auto
+      max-width 252px
+      @media $lDesktopMax
+        mt 10px
+    &-href
+      c $dark
+      fontify 18px 400 28px
+      border-bottom 1px solid $blue
+      transition .7s border-color, .7s color
+      @media $lDesktopMax
+        fontify 16px 400 26px
+      &:hover
+        c $blue
+        border-color transparent
+    &-bottom
+      @media $LandscapeMax
+        mt 30px
+      @media $LandscapeMaxFrom
+        pos absolute
+        t 100%
+        w 100%
+        l 0
+        padding 0 49px 50px
+        bgc white
+        visibility hidden
+        opacity 0
+        transition .7s visibility, .7s opacity, .7s top
+        ^[-1]:hover &
+          visibility visible
+          opacity 1
+          t calc(100% - 10px)
+      @media (min-width:1001px) and (max-width:1679px)
+        padding 0 40px 40px
+    &-btn
+      w 100%
+      text-align center
+      &:after
+        dn()
+  &__seo
+    mt 145px
+    max-width 1052px
