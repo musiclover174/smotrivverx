@@ -60,3 +60,113 @@
       &:hover
         border-color transparent
         c $blue
+  &__inner
+    padding 73px 136px 80px
+    bgc white
+    @media $desktopMax
+      padding 70px 109px 80px
+    @media $LandscapeMedium
+      padding 50px
+    @media $PortraitMedium
+      padding 30px
+    @media $Mobile370
+      padding 20px
+  &__form
+    &-title
+      c $dark
+      fontify 22px 400 34px
+      mb 43px
+      @media $desktopMax
+        fontify 20px 400 32px
+        mb 44px
+      @media $PortraitMedium
+        fontify 18px 400 28px
+        mb 34px
+  &__computation
+    dn()
+    mt 70px
+    @media $desktopMax
+      mt 54px
+    &-title
+      c $dark
+      fontify 38px 700 46px
+      mb 30px
+      @media $desktopMax
+        fontify 26px 700 30px
+        mb 35px
+    &-hint
+      c $dark
+      fontify 18px 400 28px
+      mt 30px
+      @media $desktopMax
+        fontify 16px 400 26px
+        mt 38px
+    &-btnover
+      text-align center
+      mt 34px
+  &__feed
+    dn()
+    mt 63px
+    @media $desktopMax
+      mt 67px
+    &-title
+      c $dark
+      fontify 18px 400 28px
+      mb 13px
+      @media $desktopMax
+        fontify 16px 400 26px
+        mb 12px
+    &-hint
+      c $dark
+      fontify 18px 400 28px
+      mb 24px
+      @media $desktopMax
+        fontify 16px 400 26px
+        mb 34px
+    &-sbm
+      mt 1px
+      @media $desktopMax
+        mt 6px
+      @media $LandscapeMin
+        mt 27px
+  &__sbm
+    mt 11px
+    @media $LandscapeMin
+      mt 27px
+  &__spacer
+    dn()
+  &__clear
+    dn()
+    pos relative
+    mt 26px
+    c $dark
+    fontify 18px 700 20px
+    border-bottom 1px dashed $blue
+    transition .7s border-color
+    @media $desktopMax
+      fontify 16px 700 18px
+      mt 22px
+    @media $LandscapeMin
+      mt 10px
+    &:after
+      content ""
+      pos absolute
+      t 5px
+      r -22px
+      size 12px 12px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEUAUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ7///+VCRWiAAAAEHRSTlMAChO+zs8X2BnXFBgPxtbHBQ1x0QAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhMHLBBFoQXSAAAAU0lEQVQI1z3LQQ6AMAhE0YEKhbYq9z+tUoys3k8GgBj7mABqxy6WRtAewunoClhW2nJgHiLhVq9v/caQCBm/3b9Kz1m1DVSt85o5mH4vYGm96sID0JQDHfbtqTAAAAAASUVORK5CYII=') no-repeat center
+    &:hover
+      border-color transparent
+  &[data-step="1"] ^[0]__spacer
+    db()
+  &[data-step="2"],
+  &[data-step="3"]
+    & ^[0]__clear
+      ib()
+    & ^[0]__computation
+      db()
+  &[data-step="3"]
+    & ^[0]__computation-btnover
+      dn()
+    & ^[0]__feed
+      db()

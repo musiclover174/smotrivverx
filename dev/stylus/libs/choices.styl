@@ -131,6 +131,10 @@
   transition .7s border-color
 }
 
+.choices__inner.warning {
+  border-color: $red;
+}
+
 .is-open .choices__inner {
   border-color: $blue;
 }
@@ -204,10 +208,10 @@
   position: absolute;
   width: 100%;
   padding: 10px 0;
-  background-color: #FFFFFF;
-  box-shadow 0 3px 34.3px 0.7px rgba(112, 118, 126, 0.15)
+  background-color: $blue;
+  box-shadow 0 3px 3px rgba(0, 0, 0, 0.25);
   border-top 0
-  top: calc(100% + 10px);
+  top: 100%;
   margin-top: 0;
   overflow: hidden;
   word-break: break-all;
@@ -240,13 +244,12 @@
 .choices__list--dropdown .choices__item {
   position: relative;
   padding: 0 18px;
-  fontify 18px 400 36px;
+  color: white;
+  fontify 16px 400 32px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow:hidden;
-  @media $desktopMax {
-    font-size: 16px;
-  }
+  transition: .7s background;
 }
 
 [dir="rtl"] .choices__list--dropdown .choices__item {
@@ -279,8 +282,7 @@
 }*/
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
-  background-color: $blue;
-  color: white;
+  background-color: $dblue;
 }
 
 .choices__list--dropdown .choices__item--selectable[data-choice-selectable]{
@@ -299,6 +301,7 @@
 }
 
 .choices__item--disabled {
+  dn();
   cursor: not-allowed;
   -webkit-user-select: none;
      -moz-user-select: none;

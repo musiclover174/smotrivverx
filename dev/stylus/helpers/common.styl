@@ -30,6 +30,8 @@ body
     t 0
     size 100%
     background url('../i/content__decor.png') repeat-y center top 400px
+    &_white
+      filter brightness(0) invert(1)
     @media $desktopMax
       background none
   &_sharp
@@ -213,8 +215,10 @@ div[class\^="table-scroller"]
     @media $PortraitMax
       dn()
   &__label
+    db()
     c #a6a6a6
-    fontify 16px 400 28px
+    fontify 16px 400 26px
+    mb 13px
     span 
       c $blue
   &__href
@@ -312,6 +316,8 @@ div[class\^="table-scroller"]
       dn()
   &__input
     h 52px
+    &_gborder
+      border 2px solid #e0e0e0
   &__textarea
     line-height 28px
     h 196px
@@ -350,6 +356,11 @@ div[class\^="table-scroller"]
       c $blue
   &__row
     pos relative
+    &_justify
+      df(flex-start, space-between)
+      @media $LandscapeMin
+        flex-direction column
+        justify-content flex-start
     & + &
       mt 19px
   &__col
@@ -440,6 +451,7 @@ div[class\^="table-scroller"]
     pt 2px
     @media $lDesktopMax
       fontify 14px 400 24px
+      pt 4px
     &:before 
       content ""
       pos absolute

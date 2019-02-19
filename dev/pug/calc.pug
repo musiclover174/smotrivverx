@@ -1,0 +1,94 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main._sharp
+      +e('span').decoration._white
+      .container
+        +b('section').text
+          +e.content
+            +b('section').breadcrumbs
+              +e.href(href="#") Главная
+              +e('span').delim / 
+              +e.href(href="#") Калькулятор
+              +e('span').delim / 
+            h1 Калькулятор потолка типа Armstrong
+
+            +b('section').calc.js-calc(data-step="1")
+              +e.inner
+                +e('form').form.js-calc-mainform
+                  +e('p').form-title Введите данные в форму ниже и мы расчитаем полную необходимую комплектацию для вашего помещения.
+                  .common__row.common__row_justify
+                    .common__col
+                      label.common__label Площадь потолка, м²
+                      input.common__input.common__input_gborder(type="text", data-req="req")
+                    .common__col
+                      label.common__label Периметр, м
+                      input.common__input.common__input_gborder(type="text", data-req="req")
+                  .common__row
+                    label.common__label Потолочная плита
+                    +e('select').select.js-select(data-req="req", data-type="select")
+                      option(value="-1", selected, disabled) Не выбрана
+                      option(value="1") Потолочная плита №1
+                      option(value="2") Евростандарт 600х600
+                  .common__row.common__row_justify
+                    +e.clear.js-calc-clear(type="button") Очистить
+                    +e('span').spacer
+                    +e.sbm.btn.btn_empty.js-calc-sbm(type="submit") Рассчитать
+
+                +e('section').computation
+                  +e('p').computation-title Расчеты
+                  +e.computation-text
+                    table(style="min-width: 100%")
+                      tbody
+                        tr
+                          td Плита потолочная
+                          td(style="text-align: right") 156 шт.
+                        tr
+                          td Подвес
+                          td(style="text-align: right") 39 шт.
+                        tr
+                          td Угол 3 м
+                          td(style="text-align: right") 156 шт.
+                        tr
+                          td Рейка несущая — 3,6 м
+                          td(style="text-align: right") 13 шт.
+                        tr
+                          td Рейка - 1,2 м
+                          td(style="text-align: right") 78 шт.
+                        tr
+                          td Рейка - 0,6 м
+                          td(style="text-align: right") 87 шт.
+                  +e.computation-hint * — Масса и объем считается по средним показателям веса реек и плиты.<br>Точную информацию по весу и объему уточняйте у специалистов.
+                  +e.computation-btnover
+                    +e.computation-btn.btn.btn_empty.js-calc-order(type="button") Запросить стоимость
+                
+                +e('section').feed
+                  +e('p').feed-title Заполните поля ниже и наши менеджеры свяжутся с Вами в самое ближайшее время.
+                  +e('p').feed-hint Обратите внимание на то, что поля со звёздочкой обязательны для заполнения.
+                  +e('form').form.js-calc-feed
+                    .common__row
+                      input.common__input.common__input_gborder(type="text", data-req="req")
+                      label.common__placeholder Ваше имя
+                        span *
+                    .common__row
+                      input.common__input.common__input_gborder.js-phone(type="text", data-req="req")
+                      label.common__placeholder Телефон
+                        span *
+                    .common__row
+                      img(src="img/captcha.png", style="max-width: 100%;")
+                    .common__row.common__row_justify
+                      .fakecheckbox
+                        input(type="checkbox", value="", name="agreement", checked)#agreement.fakecheckbox__truecheck
+                        label(for="agreement").fakecheckbox__label Согласен на 
+                          a(href="#") обработку персональных данных
+                      +e.feed-sbm.btn.btn_empty(type="submit") Отправить                  
+
+    include layout/__footer
+    include layout/__popup
+    include layout/__scripts

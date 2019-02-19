@@ -9,7 +9,7 @@ export default class Form {
     this.files = qsAll('.js-common-file');
     this.phones = qsAll('.js-phone');
 
-    window.checkForm = this.constructor.checkForm();
+    window.checkForm = this.constructor.checkForm;
 
     this.eventBinder();
   }
@@ -39,14 +39,17 @@ export default class Form {
       }));
     });
 
-    this.choices.forEach((select) => {
-      const choice = new Choices(select, {
-        searchEnabled: false,
-        itemSelectText: '',
-        position: 'bottom',
-        shouldSort: false,
+    if (this.choices) {
+      window.choices = [];
+      this.choices.forEach((select) => {
+        window.choices.push(new Choices(select, {
+          searchEnabled: false,
+          itemSelectText: '',
+          position: 'bottom',
+          shouldSort: false,
+        }));
       });
-    });
+    }
 
     this.digitsInput.forEach((digitInput) => {
       digitInput.addEventListener('keydown', (e) => {
@@ -136,6 +139,12 @@ export default class Form {
             case 'phone':
               if (elem.value.trim().length < 16) {
                 elem.classList.add('warning');
+                checkResult = false;
+              }
+              break;
+            case 'select':
+              if (elem.nextSibling.querySelector('.choices__item').getAttribute('data-value') === '-1') {
+                elem.parentNode.classList.add('warning');
                 checkResult = false;
               }
               break;
