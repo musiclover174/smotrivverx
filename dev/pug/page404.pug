@@ -1,0 +1,64 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main._sharp
+      +e('span').decoration._white
+      .container
+        +b('section').page404
+          +e.img(src="img/404.png")
+          h1 Страница не найдена
+          +e.text
+            p Вы неправильно набрали адрес. Возможно такой страницы больше не существует. Воспользуйтесь картой сайта, чтобы перейти на другую страницу.
+            p Вы также можете вернуться на 
+              a(href="#") главную страницу
+              |  сайта или волспользоваться картой сайта.
+        +b('nav').map
+          +e('p').title Карта сайта
+          +e('ul').list
+            +e.item
+              +e.item-href._main(href="#") О компании
+            +e.item
+              +e.item-href._main(href="#") Каталог
+              +e('ul').sublist
+                +e.sublist-item
+                  +e.item-href(href="#") Потолок
+                +e.sublist-item
+                  +e.item-href(href="#") Подвесная система
+                +e.sublist-item
+                  +e.item-href(href="#") Светильники
+            +e.item
+              +e.item-href._main(href="#") Применение
+              +e('ul').sublist
+                +e.sublist-item
+                  +e.item-href(href="#") Образование
+                +e.sublist-item
+                  +e.item-href(href="#") Медицина
+                +e.sublist-item
+                  +e.item-href(href="#") Торговля
+                +e.sublist-item
+                  +e.item-href(href="#") Офис
+                +e.sublist-item
+                  +e.item-href(href="#") Специальные помещения 
+            +e.item
+              +e.item-href._main(href="#") Калькулятор
+              +e('ul').sublist
+                +e.sublist-item
+                  +e.item-href(href="#") Потолок типа Armstrong 
+                +e.sublist-item
+                  +e.item-href(href="#") Потолок Грильято
+                +e.sublist-item
+                  +e.item-href(href="#") Потолок Реечный
+            +e.item
+              +e.item-href._main(href="#") Проекты
+            +e.item
+              +e.item-href._main(href="#") Контакты
+
+    include layout/__footer
+    include layout/__popup
+    include layout/__scripts

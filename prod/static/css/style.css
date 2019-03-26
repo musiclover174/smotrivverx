@@ -7514,3 +7514,66 @@ body.index .projects {
 .calc[data-step="3"] .calc__feed {
   display: block;
 }
+.page404 {
+  max-width: 470px;
+  padding-top: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media (max-width: 1360px) {
+  .page404 {
+    padding-top: 5px;
+  }
+}
+@media (max-width: 1170px) {
+  .page404 {
+    padding-top: 50px;
+  }
+}
+.page404 h1:not([class]) {
+  margin: 18px 0 24px;
+}
+@media (max-width: 1360px) {
+  .page404 h1:not([class]) {
+    margin-top: 11px;
+  }
+}
+.page404__img {
+  max-width: 100%;
+}
+.map {
+  max-width: 470px;
+  margin: 67px auto 0;
+  text-align: center;
+}
+.map__title {
+  color: #121212;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 29px;
+}
+.map__item + .map__item {
+  margin-top: 28px;
+}
+.map__item-href {
+  color: #121212;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  border-bottom: 1px solid #00519e;
+  -webkit-transition: 0.7s border-color;
+  transition: 0.7s border-color;
+}
+.map__item-href_main {
+  font-weight: 700;
+}
+.map__item-href:hover {
+  border-color: transparent;
+}
+.map__sublist {
+  margin-top: 10px;
+}
+.map__sublist-item + .map__sublist-item {
+  margin-top: 10px;
+}
