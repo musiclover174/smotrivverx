@@ -41,7 +41,7 @@ export default class Index {
       speed: 700,
       slidesPerView: 3,
       spaceBetween: 44,
-      loop: true,
+      loop: qsAll('.swiper-slide', qs(this.popularClass)).length > 2,
       navigation: {
         nextEl: `${this.popularClass} ~ .swiper-buttons .swiper-button-next`,
         prevEl: `${this.popularClass} ~ .swiper-buttons .swiper-button-prev`,

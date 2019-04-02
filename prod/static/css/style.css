@@ -2808,6 +2808,7 @@ div[class^="table-scroller"]:last-child {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
+  pointer-events: none;
 }
 .common__placeholder span {
   color: #00519e;
@@ -3616,7 +3617,7 @@ textarea.warning {
   transition: 1s transform, 0.7s opacity, 1s -webkit-transform;
   will-change: transform;
   opacity: 0.2;
-  background-color: rgba(255,255,255,0.9);
+  background-color: #fff;
   width: 100%;
   height: 100%;
   z-index: 10;
