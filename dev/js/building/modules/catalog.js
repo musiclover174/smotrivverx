@@ -43,11 +43,16 @@ export default class Catalog {
   }
 
   catSelect() {
-    window.catSelect = new Choices(qs(this.catSelectEl), {
-      searchEnabled: false,
-      itemSelectText: '',
-      position: 'bottom',
-      shouldSort: false,
+    window.catSelect = [];
+    qsAll(this.catSelectEl).forEach((sel) => {
+      window.catSelect.push(
+        new Choices(sel, {
+          searchEnabled: false,
+          itemSelectText: '',
+          position: 'bottom',
+          shouldSort: false,
+        })
+      );
     });
   }
 
