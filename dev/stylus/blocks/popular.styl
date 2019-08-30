@@ -32,9 +32,11 @@
         pos absolute
         z-index 1
         r 0
-        t -68px
+        t -80px
         @media $desktopMin
           t -48px
+        @media $PortraitMax
+          l 0
   &__item
     pos relative
     bgc white
@@ -51,16 +53,7 @@
       padding 119px 20px 23px
     &-img
       size 100%
-      @media $LandscapeMaxFrom
-        transform rotate3d(-1, 0, 0, 60deg)
-        transform-origin top left
-        transition 1s transform
-        will-change transform
-        ^[-1]:hover &
-          transform rotate3d(0, 0, 0, 0)
       &over
-        @media $LandscapeMaxFrom
-          perspective 1000px
         pos absolute
         l -48px
         t -28px

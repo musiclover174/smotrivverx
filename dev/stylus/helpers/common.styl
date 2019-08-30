@@ -197,6 +197,9 @@ div[class\^="table-scroller"]
     fontify 48px 700 48px
     @media $lDesktopMax
       fontify 38px 700 38px
+      white-space nowrap
+    @media $LandscapeMedium
+      white-space: normal
     @media $Mobile370
       fontify 28px 700 38px
     &_white
@@ -520,6 +523,7 @@ body:not(.index) .main
   fontify 18px 700 44px
   transition .7s border-color, .7s background, .7s color
   border 2px solid $blue
+  bgc white
   @media $lDesktopMax
     fontify 16px 700 32px
     padding 2px 28px 4px

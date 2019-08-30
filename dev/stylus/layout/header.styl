@@ -53,6 +53,8 @@
         box-shadow 0 4px 9px rgba(0, 81, 158, 0.31)
         border-radius 50%
     @media $desktopMin
+      ml auto
+    @media $PortraitMax
       dn()
     &-row
       & + &
@@ -63,8 +65,8 @@
     white-space nowrap
     @media $lDesktopMax
       fontify 16px 700 16px
-    @media $desktopMin
-      fontify 24px 700 32px
+    // @media $desktopMin
+    //   fontify 24px 700 32px
   &__feed
     ib()
     mr 3px
@@ -72,7 +74,7 @@
     fontify 16px 700 16px
     border-bottom 1px dashed $blue
     transition .7s border
-    @media $desktopMin
-      fontify 24px 700 24px
+    // @media $desktopMin
+    //   fontify 24px 700 24px
     &:hover
       border-color transparent

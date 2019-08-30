@@ -107,16 +107,7 @@
       w calc(100% - 118px)
     &-img
       size 100%
-      @media $LandscapeMaxFrom
-        transform rotate3d(-1, 0, 0, 60deg)
-        transform-origin top left
-        transition 1s transform
-        will-change transform
-        ^[-1]:hover &
-          transform rotate3d(0, 0, 0, 0)
       &over
-        @media $LandscapeMaxFrom
-          perspective 1000px
         pos absolute
         l -48px
         t -28px

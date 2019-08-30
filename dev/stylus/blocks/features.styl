@@ -61,6 +61,8 @@
     &-iconover
       df(flex-end, flex-start)
       h 75px
+      @media $Mobile370
+        h 55px
     &-icon
       max-width 100%
       max-height 100%
@@ -71,6 +73,9 @@
       @media $lDesktopMax
         fontify 16px 700 20px
         mt 16px
+  &__icon
+    @media $Mobile370
+      max-height: 100%
   &__gallery
     &-bg
       pos absolute
