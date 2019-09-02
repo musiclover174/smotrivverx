@@ -4,6 +4,8 @@
     padding 138px 0
   @media $LandscapeMax
     padding 95px 0 0
+  @media $Mobile
+    padding: 65px 0 85px
   &__top
     pos absolute
     l -5px
@@ -58,6 +60,9 @@
       w 100%
       br
         dn()
+    @media $Mobile
+      &:last-child
+        margin-bottom 0
     &-iconover
       df(flex-end, flex-start)
       h 75px

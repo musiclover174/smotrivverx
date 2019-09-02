@@ -52,10 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (qs('.glightbox')) {
-    const lightBox = GLightbox({
-      selector: 'glightbox',
-    });
-  }
+      const lightBox = GLightbox({
+        selector: 'glightbox',
+      });
+    }
 
   if (qs('.catalog')) {
     const catalog = new Catalog('.js-range', '.js-cat-sort', '.js-cat-opener', '.js-cat-select');

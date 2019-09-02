@@ -47,6 +47,15 @@ export default class Form {
           itemSelectText: '',
           position: 'bottom',
           shouldSort: false,
+          callbackOnInit: function () {
+            const ps = new PerfectScrollbar(this.choiceList, {
+              wheelPropagation: true,
+            });
+
+            this.element.addEventListener('showDropdown', function () {
+              ps.update();
+            }, false);
+          }
         }));
       });
     }

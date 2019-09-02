@@ -44,6 +44,7 @@ export default class Catalog {
 
   catSelect() {
     window.catSelect = [];
+
     qsAll(this.catSelectEl).forEach((sel) => {
       window.catSelect.push(
         new Choices(sel, {
@@ -51,6 +52,15 @@ export default class Catalog {
           itemSelectText: '',
           position: 'bottom',
           shouldSort: false,
+          callbackOnInit: function () {
+            const ps = new PerfectScrollbar(this.choiceList, {
+              wheelPropagation: true,
+            });
+
+            this.element.addEventListener('showDropdown', function() {
+              ps.update();
+            }, false);
+          }
         })
       );
     });
