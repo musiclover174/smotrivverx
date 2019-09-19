@@ -11,6 +11,7 @@ export default class Projects {
       spaceBetween: 18,
       slidesPerView: 5,
       freeMode: true,
+      loop: 0,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
       breakpoints: {
@@ -31,6 +32,7 @@ export default class Projects {
     const galleryTop = new Swiper(this.galleryEl, {
       spaceBetween: 10,
       slidesPerView: 1,
+      loop: 1,
       navigation: {
         nextEl: '.js-project-next',
         prevEl: '.js-project-prev',
