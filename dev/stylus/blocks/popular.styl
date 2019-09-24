@@ -54,8 +54,27 @@
     @media $Mobile370
       padding 119px 20px 23px
     &-img
-      size 100%
+      width 100%
+      height 100%
+      object-fit: cover
+      @media $LandscapeMaxFrom
+        transform rotate3d(-1, 0, 0, 60deg)
+        transform-origin top left
+        transition 1s transform
+        will-change transform
+        ^[-1]:hover &
+          transform rotate3d(0, 0, 0, 0)
+      &:before
+        content: ''
+        position absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        bgc white
       &over
+        @media $LandscapeMaxFrom
+          perspective 1000px
         pos absolute
         l -48px
         t -28px
