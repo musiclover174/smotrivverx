@@ -4698,8 +4698,13 @@ body.burgeropen .menu {
   }
 }
 .filter__row--btns .btn {
-  padding: 0 30px;
+  padding: 0 30px 4px;
   cursor: pointer;
+}
+@media (max-width: 1679px) {
+  .filter__row--btns .btn {
+    padding: 0 30px;
+  }
 }
 @media (max-width: 1360px) {
   .filter__row--btns .btn {
