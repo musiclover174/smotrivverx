@@ -320,10 +320,15 @@ button {
   outline: none;
   -webkit-transition: 0.7s background;
   transition: 0.7s background;
+  opacity: 0;
 }
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAMAAAAhxq8pAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAM1BMVEUAUZ7///8AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ4AUZ7///8MFa5RAAAAD3RSTlMAABXMx9TJ0BQWz830w8RwX9+BAAAAAWJLR0QB/wIt3gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+MBHw4nOeZAupIAAABRSURBVBjTbdBLDsAgCARQqrXVWsv9bysVFkhmVuQlhA/RSsqnFnRIzApfEcXuFPC3Sjs2b4a7KYo9zhQ7vxwyEH64HQ7CK+Hl8Zn4IaLdv24C56MEaDuNSo0AAAAASUVORK5CYII=");
+}
+.swiper-button-prev[tabindex="0"],
+.swiper-button-next[tabindex="0"] {
+  opacity: 1;
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
