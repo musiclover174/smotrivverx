@@ -18,6 +18,23 @@
       mt 18px
       @media $desktopMax
         mt 15px
+    &--btns
+      display: flex
+      justify-content: space-between
+
+      @media (max-width:395px)
+        flex-direction: column
+
+      .btn
+        padding: 0 30px
+        cursor: pointer
+
+        @media (max-width: 1360px)
+          padding: 0 20px
+
+        @media (max-width: 395px)
+          margin-top: 10px
+
   &__label
     db()
     c alpha($dark, .5)

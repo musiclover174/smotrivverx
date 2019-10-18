@@ -18,7 +18,11 @@ export default class Index {
     if (qs(popularClass)) this.popularInit();
     if (qs(galleryClass)) this.galleryInit();
     if (qs(developersClass)) this.developersInit();
-    if (qs(projectsClass)) this.projectsInit();
+    if (qs(projectsClass) && qsAll(projectsClass + ' .swiper-slide').length > 1) {
+      this.projectsInit() 
+    } else {
+      if (qs('.projects__car-wrapper .swiper-slide')) qs('.projects__car-wrapper .swiper-slide').classList.add('swiper-slide-active');
+    }
   }
 
   catsInit() {
